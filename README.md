@@ -1,1 +1,1 @@
-# campaign-website
+# Middlebury Campaign Website

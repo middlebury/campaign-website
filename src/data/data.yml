@@ -1,0 +1,25 @@
+site_name: Middlebury Campaign
+
+site_nav: 
+  items:
+    - text: access
+    - text: academic excellence
+    - text: experience
+    - text: capital projects
+
+secondary_footer_nav:
+  - text: About Middlebury
+    href: http://www.middlebury.edu/about
+  - text: Giving
+    href: http://www.middlebury.edu/giving
+  - text: Employment
+    href: http://www.middlebury.edu/offices/business/hr/jobseeker
+  - text: Offices and Services
+    href: http://www.middlebury.edu/office/
+  - text: Copyright
+    href: http://www.middlebury.edu/about/copyright
+  - text: Privacy
+    href: http://www.middlebury.edu/about/privacy
+  - text: Site-Editor Login
+    href: '#'
+

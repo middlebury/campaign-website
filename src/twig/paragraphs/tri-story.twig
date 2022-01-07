@@ -1,0 +1,30 @@
+{% set titles = ['Access', 'Academic Excellence', 'Experience'] %}
+<section class="paragraph--tri-story" aria-labelledby="midd-profile-spotlight-label-1">
+  <div class="container">
+    <div class="col-md-10 offset-md-1 text-center mb-6">
+      <h1>What Really Matters Here</h1>
+      <h2>Our Priorities, Your Opportunity</h2>
+    </div>
+    <ul class="row">
+      {% for item in 0..2 %}
+        <li class="col-md-4">
+          <article
+            class="tri-story-item"
+            aria-labelledby="midd-profile-spotlight-item-label-{{loop.index}}"
+          >
+            <div class="tri-story-item__media">
+              <a href="">
+                {% include 'partials/img.twig' with { name: 'tri_story_item' } %}
+              </a>
+            </div>
+            <div class="tri-story-item__content">
+              <h3 class="tri-story-item__content--heading" id="media-profile-spotlight-item-label-{{loop.index}}">{{titles[item]}}</h3>
+              <p class="tri-story-item__content--text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dicta, temporibus ex quod voluptatem eum, sint consectetur fugiat officiis voluptates reiciendis excepturi consequatur iste, dolorem eos odio harum numquam eveniet!</p>
+              <a>Details</a>
+            </div>
+          </article>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</section>

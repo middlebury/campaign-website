@@ -1,0 +1,43 @@
+.transcript {
+  margin-top: $spacing-2;
+  text-align: right;
+}
+
+.transcript__button {
+  display: inline-block;
+  border-bottom: 1px solid transparent;
+  text-transform: capitalize;
+  line-height: $line-height-1;
+}
+
+.transcript__icon {
+  margin-left: $spacing-2;
+  transition: transform 0.2s ease-in-out;
+
+  .transcript.is-toggled & {
+    transition: transform 0.2s ease-in-out;
+  }
+}
+
+.transcript__body {
+  margin-top: $spacing-2;
+  text-align: left;
+
+  .transcript.has-toggler & {
+    display: none;
+  }
+
+  .transcript.is-toggled & {
+    display: block;
+  }
+
+  p { 
+    font-size: $typescale-3;
+    margin-bottom: $spacing-4;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+

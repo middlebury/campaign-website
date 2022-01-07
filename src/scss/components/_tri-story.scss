@@ -1,0 +1,26 @@
+.tri-story {
+  &-item {
+    &__content {
+      font-family: $font-family-sans-secondary;
+      text-align: center;
+      padding-top: $spacing-2;
+
+      &--heading {
+        font-size: $typescale-7;
+        line-height: $line-height-7;
+        font-weight: $font-weight-bold;
+      }
+
+      &--text {
+        font-size: $typescale-4;
+        line-height: $line-height-7;
+        margin-top: $spacing-2;
+        margin-bottom: $spacing-3;
+      }
+
+      & a {
+        line-height: $line-height-8;
+      }
+    }
+  }
+}

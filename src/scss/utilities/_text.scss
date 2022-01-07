@@ -1,0 +1,26 @@
+.lead {
+  font-size: $typescale-8;
+  line-height: $line-height-5;
+  margin-bottom: $spacing-6;
+  text-align: center;
+  margin: 0 -17%;
+  margin-bottom: $spacing-6;
+}
+
+// Text alignment
+
+@each $breakpoint, $variant in $responsive-variants {
+  @include breakpoint($breakpoint) {
+    .text#{$variant}-left {
+      text-align: left !important;
+    }
+
+    .text#{$variant}-right {
+      text-align: right !important;
+    }
+
+    .text#{$variant}-center {
+      text-align: center !important;
+    }
+  }
+}

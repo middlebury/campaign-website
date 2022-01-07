@@ -1,0 +1,20 @@
+{
+  "name": "campaign-website",
+  "version": "1.0.0",
+  "description": "Middlebury Campaign Website",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp dev",
+    "build": "gulp build",
+    "build:icons": "svg-sprite --shape-id-generator=\"icon-%s\" --symbol --svg-xmldecl=false --symbol-dest='' --symbol-sprite=icons.twig --dest=src/twig/partials src/icons/*.svg", 
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@middlebury/gulp-config": "^0.3.7",
+    "bootstrap": "^5.1.3",
+    "gulp": "^4.0.2",
+    "svg-sprite": "^1.5.3"
+  }
+}

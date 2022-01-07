@@ -1,0 +1,24 @@
+<header class="header">
+  <div class="header__logo">
+    <a>
+      <span class="visually-hidden">Middlebury Campaign Website</span>
+      <span>
+        {% include '../../img/campaign-logo.svg' %}
+      </span>
+    </a>
+  </div>
+
+  <div class="header__dropdowns">
+    <nav class="header__nav">
+      <div class="header__menu">
+        <ul class="nav">
+          {% for item in site_nav.items %}
+            <li class="nav__item">
+              <a href="#" class="nav__link">{{ item.text }}</a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>

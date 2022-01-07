@@ -1,0 +1,69 @@
+.mega-cta {
+  position: relative;
+  margin-top: $spacing-6;
+  color: $white;
+
+  &__back{
+  }
+
+  &__front {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  } 
+
+  &__content {
+    &-title {
+      font-family: $font-family-sans-primary;
+      font-size: rem(38);
+      font-weight: $font-weight-normal;
+      line-height: $line-height-5;
+      text-align: center;
+      letter-spacing: $letter-spacing;
+    }
+
+    &-text {
+      font-family: $font-family-sans-secondary;
+      font-weight: $font-weight-medium;
+      font-size: $typescale-7;
+      line-height: $line-height-5;
+    }
+
+    &-subheading {
+      font-family: $font-family-serif;
+      font-size: $typescale-4;
+      font-weight: $font-weight-bold;
+      padding-top: $spacing-5;
+    }
+
+    &-link-list {
+      display: flex;
+      justify-content: center;
+      line-height: $line-height-3;
+      padding-top: $spacing-2;
+      font-size: $typescale-3;
+      font-weight: $font-weight-semibold;
+
+      & li {
+        padding-right: rem(12);
+
+        &:not(:first-child) {
+          padding-left: rem(12);
+        }
+
+        &:not(:last-child) {
+          border-right: 1px solid $white;
+        }
+
+        & a {
+          color: $white;
+        }
+      }
+    }
+  }
+}

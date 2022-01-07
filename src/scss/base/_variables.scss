@@ -1,0 +1,143 @@
+// Variables
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+$breakpoints: (
+  xs: 0,
+  sm: 512px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1440px
+);
+
+// Responsive variants
+// Used for easily generating responsive utility classes or grid columns.
+$responsive-variants: (
+  '': '',
+  sm: '-sm',
+  md: '-md',
+  lg: '-lg',
+  xl: '-xl'
+);
+
+// Grid configuration
+$grid-columns: 12 !default;
+$container-max-width: 1440px !default;
+
+$grid-gutter-width: rem(32);
+$grid-gutter-width-lg: rem(64);
+
+$container-width: 1300px;
+$container-width-sm: 640px;
+$container-width-md: 864px;
+
+// Color system
+$color-navy: #0d395f;
+$color-navy-dark: #022543;
+$gray-dark: #202020;
+$gray-light: #dedede;
+
+$white: #fff;
+$black: #000;
+
+// Branch colors
+$color-primary: $color-navy !default;
+
+// Spacing
+$spacing-0: 0;
+$spacing-1: rem(4);
+$spacing-2: rem(8);
+$spacing-3: rem(16);
+$spacing-4: rem(24);
+$spacing-5: rem(32);
+$spacing-6: rem(48);
+$spacing-7: rem(64);
+$spacing-8: rem(96);
+$spacing-9: rem(128);
+$spacing-10: rem(160);
+$spacing-12: rem(196);
+
+$spacing: (
+  0: $spacing-0,
+  1: $spacing-1,
+  2: $spacing-2,
+  3: $spacing-3,
+  4: $spacing-4,
+  5: $spacing-5,
+  6: $spacing-6,
+  7: $spacing-7,
+  8: $spacing-8,
+  9: $spacing-9
+);
+
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+$font-family-sans-primary: 'Open Sans', tahoma, geneva, sans-serif;
+$font-family-sans-secondary: 'Whitney', tahoma, geneva, sans-serif;
+$font-family-serif: 'Domine', georgia, serif; 
+
+$typescale-0: rem(8);
+$typescale-1: rem(12);
+$typescale-2: rem(14);
+$typescale-3: rem(16);
+$typescale-4: rem(18);
+$typescale-5: rem(20);
+$typescale-6: rem(24);
+$typescale-7: rem(28);
+$typescale-8: rem(36);
+$typescale-9: rem(48);
+$typescale-10: rem(64);
+
+// font-weights
+$font-weight-light: 300 !default;
+$font-weight-normal: 400 !default;
+$font-weight-medium: 500 !default;
+$font-weight-semibold: 600 !default;
+$font-weight-bold: 700 !default;
+
+// line heights
+$line-height-1: 0.875;
+$line-height-2: 0.9;
+$line-height-3: 1;
+$line-height-4: 1.4;
+$line-height-5: 1.5;
+$line-height-6: 1.68;
+$line-height-7: 1.7;
+$line-height-8: 1.75;
+
+// Base
+$font-size-base: 16px !default;
+$line-height-base: $line-height-7 !default;
+$font-family-base: $font-family-sans-primary !default;
+
+$letter-spacing: -0.5px;
+
+// Body
+$body-bg: $white !default;
+$body-color: $gray-dark !default;
+
+//// Element Styles
+
+// Links
+$link-color: $color-primary !default;
+$link-decoration: underline !default;
+$link-hover-decoration: $color-primary !default;
+$link-hover-decoration: none !default; 
+
+// Headings
+$headings-font-family: $font-family-sans-primary;
+$headings-font-weight: $font-weight-normal;
+$headings-font-size: $typescale-8;
+$headings-line-height: $line-height-5;
+
+// Paragraphs
+$paragraph-font-size: $typescale-4 !default;
+$paragraph-line-height: $line-height-7 !default;
+$paragraph-margin-bottom: $spacing-4 !default;

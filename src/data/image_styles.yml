@@ -1,0 +1,24 @@
+image_styles:
+  # paragraphs
+  video:
+    title: Video component
+    ratio: '16:9'
+    srcset:
+      - 400x225
+      - 640x360
+      - 896x504
+  tri_story_item:
+    title: Tri story
+    ratio: '3:4'
+    srcset:
+      - 90x120
+      - 144x192
+      - 288x384
+      - 414x552
+  mega_cta: 
+    title: Mega CTA
+    ratio: '16:9'
+    srcset:
+      - 400x225
+      - 640x360
+      - 896x504

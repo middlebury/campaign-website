@@ -1,0 +1,44 @@
+.footer {
+  background-color: $color-navy-dark;
+  padding-top: $spacing-4;
+  padding-bottom: $spacing-4;
+}
+
+.footer__list {
+  @include breakpoint(lg) {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100%;
+  }
+}
+
+.footer__item {
+  &:not(:first-child) {
+    @include breakpoint(lg) {
+      margin-left: $spacing-3;
+    }
+    @include breakpoint(xl) {
+      margin-left: $spacing-4;
+    }
+  }
+}
+
+.footer__link {
+  color: $white;
+  font-size: $typescale-2;
+  display: block;
+  padding-top: $spacing-1;
+  padding-bottom: $spacing-1;
+  white-space: nowrap;
+  text-decoration: none;
+
+  @include breakpoint(lg) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,26 @@
+{% set id = random(1234) %}
+<section class="paragraph--mega-cta mega-cta" aria-labelledby="midd-mega-cta-label-{{id}}">
+  <figure class="mega-cta__back">
+    {% include 'partials/img.twig' with { name: 'mega_cta' } %}
+  </figure>
+
+  <div class="mega-cta__front">
+    <div class="mega-cta__content">
+      <h2 class="mega-cta__content-title" id="midd-mega-cta-label-{{id}}">Capital Projects</h2>
+      <p class="mega-cta__content-text">
+        <em>People</em> make the institution.<br>
+        Our buildings exist to advance their work.
+      </p>
+      <h3 class="mega-cta__content-subheading">At the College</h3>
+      <ul class="mega-cta__content-link-list">
+        {% for i in 0..2 %}
+          <li><a class="mega-cta__content-link" href="">Link Text</a></li>
+        {% endfor %}
+      </ul>
+      <h3 class="mega-cta__content-subheading">At the Institute</h3>
+      <ul class="mega-cta__content-link-list">
+        <li><a class="mega-cta__content-link" href="">Link Text</a></li>
+      </ul>
+    </div>
+  </div>
+</section>

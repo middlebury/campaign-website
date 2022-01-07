@@ -1,0 +1,106 @@
+*,
+:before,
+:after {
+  box-sizing: border-box;
+}
+
+html, 
+body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: $font-family-base;
+  line-height: $line-height-base;
+  font-size: $font-size-base;
+  color: $body-color;
+  background-color: $body-bg;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-print-color-adjust: exact;
+}
+
+button {
+  padding: 0;
+  background: 0;
+  border: 0;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
+  cursor: pointer;
+}
+
+figure {
+  margin: 0;
+}
+
+hr {
+ width: calc(100vw - 64px);
+ background-color: $gray-light;
+ margin: $spacing-5 0;
+ margin-left: calc(50% - 50vw + 32px);
+ height: 0.25px;
+ border: 0;
+}
+
+a {
+  color: $link-color;
+  text-decoration: $link-decoration;
+
+  &:hover {
+    text-decoration: $link-hover-decoration;
+  }
+}
+
+strong {
+  font-weight: $font-weight-bold;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+ol,
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $headings-font-family;
+  font-weight: $headings-font-weight;
+  line-height: $headings-line-height;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.h1,
+h1 {
+  @include h1;
+}
+
+.h2,
+h2 {
+  @include h2;
+  font-weight: $font-weight-light;
+}
+
+svg {
+  fill: currentColor;
+}
