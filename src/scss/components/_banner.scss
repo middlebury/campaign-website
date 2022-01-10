@@ -1,0 +1,26 @@
+.banner {
+  position: relative; 
+  &__back {
+
+  }
+
+  &__front {
+    top: 0;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+
+  &__content {
+    & h1 {
+      font-size: $typescale-10;
+      line-height: $line-height-2;
+      background: $color-navy;
+      color: $white;
+      font-weight: $font-weight-light;
+      padding: $spacing-3;
+      padding-right: rem(28);
+    }
+  }
+}

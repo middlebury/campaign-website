@@ -1,0 +1,19 @@
+.text {
+  & h2,
+  & .h2 {
+    @include h1;
+    font-weight: $font-weight-light;
+  }
+
+  & p {
+    @include h2;
+    font-weight: $font-weight-light;
+  }
+
+  & a {
+    font-weight: $font-weight-light;
+    font-size: $typescale-4;
+    line-height: $line-height-6;
+    text-transform: capitalize;
+  }
+}

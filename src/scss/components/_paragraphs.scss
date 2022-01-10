@@ -14,6 +14,21 @@
   // }
 }
 
+%paragraph-space-sm {
+  margin-top: $spacing-6;
+  margin-bottom: $spacing-5;
+
+  @include breakpoint(md) {
+    margin-top: $spacing-7;
+    margin-bottom: $spacing-6;
+  }
+
+  @include breakpoint(lg) {
+    margin-top: $spacing-8;
+    margin-bottom: $spacing-7;
+  }
+}
+
 %paragraph-full-width {
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
@@ -61,4 +76,24 @@
 .paragraph--mega-cta {
   margin-top: $spacing-6;
   margin-bottom: $spacing-6;
+}
+
+.paragraph--banner, .paragraph--video-group {
+  margin-top: $spacing-3;
+  margin-bottom: $spacing-6;
+
+  @include breakpoint(lg) {
+    margin-left: calc(-100% * 2 / 12);
+    margin-right: calc(-100% * 2 / 12);
+    @include make-gutters;
+  }
+}
+
+.paragraph--video-group {
+  margin-top: $spacing-7;
+  margin-bottom: $spacing-7;
+}
+
+.paragraph--full {
+  @extend %paragraph-full-width;
 }
