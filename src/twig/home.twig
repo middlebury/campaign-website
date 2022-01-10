@@ -1,5 +1,33 @@
 {% extends 'layout.twig' %}
 
 {% block content %}
-  {% include 'partials/top-level-layout.twig' %}
+  <div class="container">
+    <div class="row">
+      
+      <div class="paragraphs paragraphs--wide">
+        {% block paragraphs %}
+          {% include 'paragraphs/lead.twig' %}
+          {% include 'paragraphs/video.twig' %}
+
+          {% include 'paragraphs/text.twig' with {
+            content: '<hr>
+            <p>Because understanding the world and finding value in our differences has never been more urgent than it is today.</p>
+            <hr> '
+          }%}
+
+          {% include 'paragraphs/tri-story.twig' %}
+
+          <hr>
+
+          {% include 'paragraphs/mega-cta.twig' %}
+
+          {% include 'paragraphs/text.twig' with {
+            content: ' <hr>
+            <h2 class="text-center">Middlebury speaks the language of the future. <br> Join the conversation.</h2>'
+          } %}
+        {% endblock %}
+      </div>
+      
+    </div>
+  </div>
 {% endblock %}
