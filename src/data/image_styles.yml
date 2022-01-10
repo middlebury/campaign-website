@@ -22,3 +22,11 @@ image_styles:
       - 400x225
       - 640x360
       - 896x504
+  banner_image: 
+    title: Banner image_styles
+    ratio: '16:9'
+    srcset:
+      - 400x225
+      - 640x360
+      - 832x468
+      - 1136x639
