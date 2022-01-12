@@ -1,4 +1,5 @@
 const gulp = require('gulp');
+const replace = require('gulp-replace');
 const args = require('yargs').argv;
 const { createConfig } = require('@middlebury/gulp-config');
 
