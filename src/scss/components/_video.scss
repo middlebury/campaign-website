@@ -14,6 +14,24 @@
   }
 }
 
+.video__front {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: $spacing-3;
+  z-index: 10;
+}
+
+.video__title {
+  color: $white;
+  padding-bottom: $spacing-3;
+  font-weight: $font-weight-semibold;
+  line-height: $line-height-4;
+}
+
 .video__link {
   &:after {
     content: '';
@@ -33,10 +51,7 @@
 }
 
 .video__button {
-  position: absolute;
   bottom: $spacing-3;
-  left: calc(50% - 96px);
-  z-index: 10;
   padding: $spacing-2;
   background-color: $white;
 
