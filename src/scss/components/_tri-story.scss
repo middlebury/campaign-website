@@ -1,4 +1,8 @@
 .tri-story {
+  &__title {
+    margin-bottom: $spacing-2;
+  }
+  
   &-item {
     &__content {
       font-family: $font-family-sans-secondary;

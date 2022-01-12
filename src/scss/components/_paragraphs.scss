@@ -61,7 +61,7 @@
 }
 
 .paragraph--text {
-  text-align: center;
+  @extend %paragraph-full-width;
 }
 
 .paragraph--tri-story {
@@ -87,6 +87,11 @@
     margin-right: calc(-100% * 2 / 12);
     @include make-gutters;
   }
+}
+
+.paragraph--video {
+  margin-top: $spacing-6;
+  margin-bottom: $spacing-6;
 }
 
 .paragraph--video-group {
