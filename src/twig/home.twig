@@ -20,11 +20,11 @@
           <hr>
 
           {% include 'paragraphs/mega-cta.twig' %}
-
-          {% include 'paragraphs/text.twig' with {
-            content: ' <hr>
-            <h2 class="text-center">Middlebury speaks the language of the future. <br> Join the conversation.</h2>'
-          } %}
+          
+          <hr>
+          {% include 'paragraphs/quote.twig' with {
+            quote_text: 'Middlebury speaks the language of the future.<br>Join the conversation.'
+          }%}
         {% endblock %}
       </div>
       

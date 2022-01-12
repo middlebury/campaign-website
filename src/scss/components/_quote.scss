@@ -1,0 +1,25 @@
+.quote {
+  font-size: $typescale-8;
+  line-height: $line-height-5;
+  font-weight: $font-weight-light;
+  text-align: center;
+}
+
+.quote__text {
+  margin:0;
+
+  .quote--marks & {
+    quotes: '“' '”';
+    position: relative;
+
+    &:before {
+      content: open-quote;
+      top: 0;
+      right: 100%;
+    }
+
+    &:after {
+      content: close-quote;
+    }
+  }
+}

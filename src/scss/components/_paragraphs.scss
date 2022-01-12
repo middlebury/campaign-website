@@ -94,6 +94,12 @@
   margin-bottom: $spacing-7;
 }
 
+.paragraph--quote {
+  margin-top: $spacing-6;
+  margin-bottom: $spacing-6;
+}
+
+
 .paragraph--full {
   @extend %paragraph-full-width;
 }
