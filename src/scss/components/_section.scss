@@ -1,0 +1,14 @@
+.section {
+  margin-bottom: $spacing-6;
+
+  &__header {
+    margin-bottom: $spacing-2;
+  }
+
+  &__blurb {
+    font-size: $typescale-7;
+    line-height: $line-height-6;
+    font-weight: $font-weight-light;
+    margin: 0;
+  }
+}
