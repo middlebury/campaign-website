@@ -2,6 +2,11 @@
   margin-bottom: $spacing-6;
 
   &__header {
+    margin-bottom: $spacing-6;
+    text-align: center;
+  }
+
+  &__title {
     margin-bottom: $spacing-2;
   }
 
