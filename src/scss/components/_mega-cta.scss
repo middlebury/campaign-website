@@ -18,7 +18,7 @@
   } 
 
   &__content {
-    &-title {
+    & h2 {
       font-family: $font-family-sans-primary;
       font-size: rem(38);
       font-weight: $font-weight-normal;
@@ -27,21 +27,21 @@
       letter-spacing: $letter-spacing;
     }
 
-    &-text {
+    & p {
       font-family: $font-family-sans-secondary;
       font-weight: $font-weight-medium;
       font-size: $typescale-7;
       line-height: $line-height-5;
     }
 
-    &-subheading {
+    & h3 {
       font-family: $font-family-serif;
       font-size: $typescale-4;
       font-weight: $font-weight-bold;
       padding-top: $spacing-5;
     }
 
-    &-link-list {
+    & ul {
       display: flex;
       justify-content: center;
       line-height: $line-height-3;
