@@ -25,9 +25,9 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Use Node.js
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v2
         with:
-          node_version: '12.x'
+          node-version: '12'
           
       - name: Cache Node.js modules
         uses: actions/cache@v2
