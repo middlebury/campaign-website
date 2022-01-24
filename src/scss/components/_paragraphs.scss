@@ -104,6 +104,34 @@
   margin-bottom: $spacing-6;
 }
 
+.paragraph--image {
+  margin-bottom: $spacing-7;
+  margin-top: $spacing-7;
+
+  &.image--left {
+    margin-top: 0;
+    margin-bottom: $spacing-4;
+    margin-right: $spacing-4;
+  }
+
+  &.image--right {
+    margin-top: 0;
+    margin-bottom: $spacing-4;
+    margin-left: $spacing-4;
+  }
+}
+
+.paragraph--image:not(.image--left):not(.image--right) {
+  @include breakpoint(lg) {
+    // Main column is 10 wide, so we divide by remaining
+    // columns on sides to pull them out to 12 columns.
+    // More on these techniques here:
+    // https://css-tricks.com/full-width-containers-limited-width-parents/
+    margin-left: calc(-100% * 2 / 12);
+    margin-right: calc(-100% * 2 / 12);
+    @include make-gutters;
+  }
+}
 
 .paragraph--full {
   @extend %paragraph-full-width;

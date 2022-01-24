@@ -1,9 +1,187 @@
 .typography {
+  > :last-child {
+    margin-bottom: 0;
+  }
+
+  p {
+    font-size: $paragraph-font-size;
+    margin-bottom: $spacing-5;
+    line-height: 2;
+  } 
+
+  a {
+    font-weight: $font-weight-medium;
+    @include link-border;
+  }
+
+  a:not([href*='middlebury.edu']):not([href^='#']):not([href^='/']):not([href^='mailto:']):not([href*='drive.google.com']):not([href*='docs.google.com']):not([href*='.pdf']):not([href*='middleburycollege-my.sharepoint.com']):not([name]):not([role*='button']) {
+    @include link-external;
+  }
+
+  a[href^='mailto:'],
+  a[href*='drive.google.com'],
+  a[href*='docs.google.com'],
+  a[href*='.pdf'],
+  a[href*='middleburycollege-my.sharepoint.com'] {
+    &:after {
+      font-size: rem(10);
+      display: inline-block;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      padding: $spacing-1;
+      line-height: 1;
+      background: $color-navy;
+      color: $white;
+      margin-left: $spacing-1;
+      transition: 0.2s;
+    }
+
+    &:hover,
+    &:focus {
+      &:after {
+        transform: translateY(-4px);
+      }
+    }
+  }
+
+  a[href^='mailto:'] {
+    &:after {
+      content: 'Email';
+    }
+  }
+
+  a[href*='.pdf'] {
+    &:after {
+      content: 'PDF';
+    }
+  }
+
+  a[href*='drive.google.com'],
+  a[href*='docs.google.com'] {
+    &:after {
+      content: 'Google Drive';
+    }
+  }
+
+  a[href*='middleburycollege-my.sharepoint.com'] {
+    &:after {
+      content: 'Office 365';
+    }
+  }
+
+  // reset styles for jump links
+  a[id][name] {
+    color: currentColor;
+    text-decoration: none;
+    border: 0;
+  }
+
+  blockquote {
+    font-size: $typescale-7;
+    font-weight: $font-weight-light;
+    line-height: $line-height-6;
+    margin-left: $spacing-5;
+    padding-left: $spacing-3;
+    border-left: 0.25px solid $gray-dark;
+    margin-top: $spacing-6;
+    margin-bottom: $spacing-6;
+  }
+
+  ul,
+  ol {
+    margin-bottom: $paragraph-margin-bottom;
+    padding-left: $spacing-5;
+    padding-right: $spacing-5;
+    font-size: $paragraph-font-size;
+
+    ul,
+    ol {
+      margin-top: $spacing-3;
+      margin-bottom: $spacing-3;
+      padding-left: $spacing-4;
+    }
+  }
+
+  ul {
+    > li {
+      position: relative;
+
+      &:before {
+        content: '\2022';
+        position: absolute;
+        right: calc(100% + 8px);
+        top: 6px;
+        font-size: 10px;
+      }
+    }
+  }
+
+  ol {
+    list-style-type: none;
+    counter-reset: ol;
+
+    > li {
+      counter-increment: ol;
+      position: relative;
+
+      &:before {
+        content: counter(ol) '.';
+        position: absolute;
+        right: calc(100% + #{$spacing-2});
+        top: 0.25rem;
+        font-size: $typescale-2;
+        line-height: $line-height-7;
+      }
+    }
+  }
+
+  li {
+    &:not(:last-of-type) {
+      margin-bottom: $spacing-2;
+    }
+
+    p:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
   h1 {
-    
+    font-size: $typescale-10;
+    font-weight: $font-weight-light;
+    line-height: $line-height-2;
+    margin-top: $spacing-7;
+    margin-bottom: $spacing-7;
+    color: $color-navy;
   }
 
   h2 {
+    @include h2;
+    font-weight: $font-weight-semibold;
+    margin-top: $spacing-5;
+    margin-bottom: $spacing-3;
+  }
 
+  h3 {
+    margin-top: $spacing-5;
+    margin-bottom: $spacing-2;
+    font-weight: $font-weight-semibold;
+  }
+
+  h4 {
+    margin-top: $spacing-5;
+    margin-bottom: $spacing-1;
+    font-weight: $font-weight-semibold;
+  }
+
+  h5 {
+    margin-top: $spacing-5;
+    margin-bottom: $spacing-1;
+    font-weight: $font-weight-semibold;
+  }
+
+  h6 {
+    margin-top: $spacing-5;
+    margin-bottom: $spacing-1;
+    font-weight: $font-weight-semibold;
   }
 }

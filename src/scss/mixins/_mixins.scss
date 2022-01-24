@@ -55,3 +55,20 @@
     text-decoration: none;
   }
 }
+
+@mixin link-external() {
+  &:after {
+    display: inline-block;
+    content: url('/img/external-link.svg');
+    height: 1em;
+    width: 1em;
+    font-size: $typescale-2;
+    margin-left: $spacing-1;
+  }
+}
+
+@mixin ie {
+  @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    @content;
+  }
+}

@@ -30,3 +30,18 @@ image_styles:
       - 640x360
       - 832x468
       - 1136x639
+  float_image:
+    title: Floating Image
+    ratio: '3:4'
+    srcset:
+      - 90x120
+      - 144x192
+      - 288x384
+  basic_image:
+    title: Image component  
+    ratio: '16:9'
+    srcset:
+      - 400x225
+      - 640x360
+      - 832x468
+      - 1136x639
