@@ -89,6 +89,10 @@
   }
 }
 
+.paragraph--chart {
+  @extend %paragraph-space;
+}
+
 .paragraph--video {
   margin-top: $spacing-6;
   margin-bottom: $spacing-6;

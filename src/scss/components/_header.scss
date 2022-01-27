@@ -2,7 +2,6 @@
   background: $white;
   display: flex;
   color: $color-navy;
-  // justify-content: space-between;
   position: relative;
   padding-right: $spacing-5;
   padding-left: $spacing-5;
@@ -12,16 +11,8 @@
 }
 
 .header__logo {
-  // display: flex;
-  // align-items: center;
   padding-top: $spacing-3;
-  // padding-bottom: $spacing-2;
 }
-
-// .header__dropdowns {
-//   display: flex;
-//   align-items: center;
-// }
 
 .header__nav {
   list-style: none;
