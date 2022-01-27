@@ -10,86 +10,246 @@
 
             <h1>Text Component</h1>
             {% include 'paragraphs/image.twig' with { name: "basic_image" } %}
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do <a href="#">eiusmod tempor</a> incididunt ut labore et <em>dolore magna aliqua</em>. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse <strong>cillum dolore eu fugiat</strong> nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            {% include 'paragraphs/text.twig' with {
+              content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do <a href="#">eiusmod tempor</a> incididunt ut labore et <em>dolore magna aliqua</em>. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse <strong>cillum dolore eu fugiat</strong> nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>'
+            }%}
 
             {% include 'paragraphs/image.twig' with { left: true, name: "float_image" } %}
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est.</p>
-            <p>ligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus.</p>
+            
+            {% include 'paragraphs/text.twig' with {
+              content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est.</p>
+
+              <p>ligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus.</p>'
+            }%}
 
             {% include 'paragraphs/image.twig' with { right: true, name: "float_image" } %}
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-            <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est.</p>
+
+            {% include 'paragraphs/text.twig' with {
+              content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est.</p>'
+            }%}
+
+            {% include 'paragraphs/tri-story.twig' with {
+              title: 'What Really Matters Here',
+              subheading: 'Our Priorities, Your Opportunity'
+            }%}
 
             {% for i in 2..6 %}
-              <h{{i}}>Text Component&nbsp;(h{{i}})</h{{i}}>
-              <p>Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipisicing elit. Minus <a href="">reiciendis odit</a>, adipisci consequatur <em>repellat</em> non distinctio consequuntur delectus, sit veritatis ullam quaerat dolorem perspiciatis voluptas sed pariatur assumenda ut sint.</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus reiciendis <sup>odit</sup>, adipisci consequatur repellat non distinctio consequuntur <sub>delectus</sub>, sit veritatis ullam quaerat dolorem perspiciatis voluptas sed pariatur assumenda ut sint.</p>
+              {% include 'paragraphs/text.twig' with {
+                content: '<h'~i~'>Text Component&nbsp;(h'~i~')</h'~i~'>
+                <p>Lorem ipsum dolor sit amet, <strong>consectetur</strong> adipisicing elit. Minus <a href="">reiciendis odit</a>, adipisci consequatur <em>repellat</em> non distinctio consequuntur delectus, sit veritatis ullam quaerat dolorem perspiciatis voluptas sed pariatur assumenda ut sint.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus reiciendis <sup>odit</sup>, adipisci consequatur repellat non distinctio consequuntur <sub>delectus</sub>, sit veritatis ullam quaerat dolorem perspiciatis voluptas sed pariatur assumenda ut sint.</p>'
+              }%}
             {% endfor %}
 
-            <p>Lorem ipsum <a href="https://learn.middlebury.edu">learn.middlebury.edu</a> amet, <strong>consectetur</strong> adipisicing elit. Minus <a href="/">relative link</a>, adipisci consequatur <em>repellat</em> non distinctio consequuntur delectus, sit veritatis ullam quaerat dolorem <a href="http://google.com">external link</a> sed pariatur assumenda ut sint.</p>
+            {% include 'paragraphs/mega-cta.twig' %}
 
-            <p>Lorem ipsum dolor sit amet, <a href="mailto:">email@middlebury.edu</a> elit. Minus reiciendis <sup>odit</sup>, adipisci consequatur repellat non distinctio consequuntur <sub>delectus</sub>, sit veritatis ullam quaerat dolorem perspiciatis voluptas sed pariatur assumenda ut sint.</p>
+            {% include 'paragraphs/text.twig' with {
+              content: '<p>Lorem ipsum <a href="https://learn.middlebury.edu">learn.middlebury.edu</a> amet, <strong>consectetur</strong> adipisicing elit. Minus <a href="/">relative link</a>, adipisci consequatur <em>repellat</em> non distinctio consequuntur delectus, sit veritatis ullam quaerat dolorem <a href="http://google.com">external link</a> sed pariatur assumenda ut sint.</p>
 
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime blanditiis dolor delectus eum mollitia commodi alias laborum <a href="https://docs.google.com/document/d/1iW2Kp8VU0k4sUSVtjeDe1HvRWejz9evf9jGeJPLD8FY/edit">google docs</a> expedita consequatur, odio numquam ullam accusantium ad. Deserunt facere sequi eum quasi?</p>
+              <p>Lorem ipsum dolor sit amet, <a href="mailto:">email@middlebury.edu</a> elit. Minus reiciendis <sup>odit</sup>, adipisci consequatur repellat non distinctio consequuntur <sub>delectus</sub>, sit veritatis ullam quaerat dolorem perspiciatis voluptas sed pariatur assumenda ut sint.</p>
 
-            <p>Lorem ipsum, dolor sit amet <a href="https://drive.google.com">google drive</a> adipisicing elit. Maxime blanditiis dolor delectus eum mollitia commodi alias laborum <a href="https://www.middlebury.edu/schools-abroad/sites/www.middlebury.edu.schools-abroad/files/2019-05/discipline%20grid%202019-20.pdf?fv=-8tHe8Vn">pdf file link</a> expedita consequatur, odio numquam ullam accusantium ad. Deserunt facere sequi eum quasi?</p>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime blanditiis dolor delectus eum mollitia commodi alias laborum <a href="https://docs.google.com/document/d/1iW2Kp8VU0k4sUSVtjeDe1HvRWejz9evf9jGeJPLD8FY/edit">google docs</a> expedita consequatur, odio numquam ullam accusantium ad. Deserunt facere sequi eum quasi?</p>
 
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime blanditiis dolor delectus eum mollitia commodi alias laborum <a href="https://middleburycollege-my.sharepoint.com/:w:/r/personal/zpykosz_middlebury_edu/_layouts/15/Doc.aspx?sourcedoc=%7BDBBAE29A-47B4-40CA-983A-9942E5FED5C9%7D&file=Document%201.docx&action=editnew&mobileredirect=true&wdTpl=TM00002138&wdNewAndOpenCt=1559232589076&wdPreviousSession=fd0d99b6-766a-403a-a81a-64c0a420f780&wdOrigin=ohpAppStartPages">office 365</a> expedita consequatur, odio numquam ullam accusantium ad. Deserunt facere sequi eum quasi?</p>
+              <p>Lorem ipsum, dolor sit amet <a href="https://drive.google.com">google drive</a> adipisicing elit. Maxime blanditiis dolor delectus eum mollitia commodi alias laborum <a href="https://www.middlebury.edu/schools-abroad/sites/www.middlebury.edu.schools-abroad/files/2019-05/discipline%20grid%202019-20.pdf?fv=-8tHe8Vn">pdf file link</a> expedita consequatur, odio numquam ullam accusantium ad. Deserunt facere sequi eum quasi?</p>
 
-            <blockquote>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.</blockquote>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime blanditiis dolor delectus eum mollitia commodi alias laborum <a href="https://middleburycollege-my.sharepoint.com/:w:/r/personal/zpykosz_middlebury_edu/_layouts/15/Doc.aspx?sourcedoc=%7BDBBAE29A-47B4-40CA-983A-9942E5FED5C9%7D&file=Document%201.docx&action=editnew&mobileredirect=true&wdTpl=TM00002138&wdNewAndOpenCt=1559232589076&wdPreviousSession=fd0d99b6-766a-403a-a81a-64c0a420f780&wdOrigin=ohpAppStartPages">office 365</a> expedita consequatur, odio numquam ullam accusantium ad. Deserunt facere sequi eum quasi?</p>'
+            }%}
+
+            {% include 'paragraphs/quote.twig' with {
+              quote_text: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.'
+            }%}
 
             {% include 'paragraphs/image.twig' with { name: "basic_image", caption: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.", fit_width: true } %}
 
-            <h3>short list</h3>
+            {% include 'paragraphs/video-group.twig' %}
 
-            <ul>
-              <li>some text</li>
-              <li>some more text sorta long ish text</li>
-              <li>some more long ish text</li>
-            </ul>
+            {% include 'paragraphs/text.twig' with {
+              content: '<h3>short list</h3>
 
-            <h3>Unordered list</h3>
-            <ul>
-              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed quas voluptatibus minima facere nesciunt odio, fugiat distinctio minus consequatur quo placeat neque expedita laudantium incidunt blanditiis laborum nam similique illum.</li>
-              <li>
-              Excepturi, minima provident. Reiciendis illo assumenda eveniet vero, velit nihil id, animi in nesciunt voluptatum, beatae officia! Nostrum consequuntur commodi nisi velit voluptatum tempore quisquam illo dolore, fugiat vitae distinctio.
-                <ul>
-                  <li>Excepturi, minima provident. Reiciendis illo assumenda eveniet vero</li>
-                </ul>
-              </li>
-              <li>
-                Quae corrupti officia debitis suscipit, quis consequuntur consequatur perspiciatis eveniet odio non! Recusandae, assumenda vero reprehenderit est voluptate qui natus, itaque sapiente officia ex voluptatibus tempora facere error enim repudiandae!
-              </li>
-            </ul>
+              <ul>
+                <li>some text</li>
+                <li>some more text sorta long ish text</li>
+                <li>some more long ish text</li>
+              </ul>
 
-            <h3>Ordered list</h3>
-            <ol>
-              <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem asperiores ut, aliquid eveniet deleniti impedit mollitia earum, explicabo quaerat, voluptate, dignissimos omnis sed aliquam. Hic possimus eum veritatis corporis labore.</li>
-              <li>Esse numquam nulla at ipsam, consequatur dolore! Officiis enim architecto, sed delectus exercitationem veritatis, voluptatum beatae excepturi sapiente quas veniam hic cum vero itaque, possimus, fuga? Magnam, consequatur reiciendis velit.
-                <ul>
-                  <li>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus vero consectetur ea dolor aperiam nostrum rerum totam cumque qui laborum culpa dignissimos impedit, aut, soluta magni nam hic molestiae rem?</p>
-                  </li>
-                  <li>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus vero consectetur ea dolor aperiam nostrum rerum totam cumque qui laborum culpa dignissimos impedit, aut, soluta magni nam hic molestiae rem?</p>
-                  </li>
-                </ul>
-              </li>
-              <li>Dignissimos autem sit deserunt ratione illum reiciendis, atque, facere repellat quaerat excepturi tempore neque cupiditate. Ut unde autem dolores, accusamus, magnam pariatur, facere corrupti doloribus obcaecati fugiat earum quis nisi.</li>
-              <li>Officiis inventore, repellendus ullam laudantium amet aperiam porro illum est, tempora temporibus ut. Placeat quisquam reprehenderit architecto repudiandae fuga id nisi, modi eum, libero mollitia quis rerum molestiae sunt itaque?</li>
-            </ol>
+              <h3>Unordered list</h3>
+              <ul>
+                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed quas voluptatibus minima facere nesciunt odio, fugiat distinctio minus consequatur quo placeat neque expedita laudantium incidunt blanditiis laborum nam similique illum.</li>
+                <li>
+                Excepturi, minima provident. Reiciendis illo assumenda eveniet vero, velit nihil id, animi in nesciunt voluptatum, beatae officia! Nostrum consequuntur commodi nisi velit voluptatum tempore quisquam illo dolore, fugiat vitae distinctio.
+                  <ul>
+                    <li>Excepturi, minima provident. Reiciendis illo assumenda eveniet vero</li>
+                  </ul>
+                </li>
+                <li>
+                  Quae corrupti officia debitis suscipit, quis consequuntur consequatur perspiciatis eveniet odio non! Recusandae, assumenda vero reprehenderit est voluptate qui natus, itaque sapiente officia ex voluptatibus tempora facere error enim repudiandae!
+                </li>
+              </ul>
 
-            <p>Dignissimos autem sit deserunt ratione illum reiciendis, atque, facere repellat quaerat excepturi tempore neque cupiditate. Ut unde autem dolores, accusamus, magnam pariatur, facere corrupti doloribus obcaecati fugiat earum quis nisi.</p>
+              <h3>Ordered list</h3>
+              <ol>
+                <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem asperiores ut, aliquid eveniet deleniti impedit mollitia earum, explicabo quaerat, voluptate, dignissimos omnis sed aliquam. Hic possimus eum veritatis corporis labore.</li>
+                <li>Esse numquam nulla at ipsam, consequatur dolore! Officiis enim architecto, sed delectus exercitationem veritatis, voluptatum beatae excepturi sapiente quas veniam hic cum vero itaque, possimus, fuga? Magnam, consequatur reiciendis velit.
+                  <ul>
+                    <li>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus vero consectetur ea dolor aperiam nostrum rerum totam cumque qui laborum culpa dignissimos impedit, aut, soluta magni nam hic molestiae rem?</p>
+                    </li>
+                    <li>
+                      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus vero consectetur ea dolor aperiam nostrum rerum totam cumque qui laborum culpa dignissimos impedit, aut, soluta magni nam hic molestiae rem?</p>
+                    </li>
+                  </ul>
+                </li>
+                <li>Dignissimos autem sit deserunt ratione illum reiciendis, atque, facere repellat quaerat excepturi tempore neque cupiditate. Ut unde autem dolores, accusamus, magnam pariatur, facere corrupti doloribus obcaecati fugiat earum quis nisi.</li>
+                <li>Officiis inventore, repellendus ullam laudantium amet aperiam porro illum est, tempora temporibus ut. Placeat quisquam reprehenderit architecto repudiandae fuga id nisi, modi eum, libero mollitia quis rerum molestiae sunt itaque?</li>
+              </ol>
+
+              <p>Dignissimos autem sit deserunt ratione illum reiciendis, atque, facere repellat quaerat excepturi tempore neque cupiditate. Ut unde autem dolores, accusamus, magnam pariatur, facere corrupti doloribus obcaecati fugiat earum quis nisi.</p>'
+            }%}
 
             {% include 'paragraphs/video.twig' %}
 
-            <p>Dignissimos autem sit deserunt ratione illum reiciendis, atque, facere repellat quaerat excepturi tempore neque cupiditate. Ut unde autem dolores, accusamus, magnam pariatur, facere corrupti doloribus obcaecati fugiat earum quis nisi.</p>
+            {% include 'paragraphs/text.twig' with {
+              content: '<p>Dignissimos autem sit deserunt ratione illum reiciendis, atque, facere repellat quaerat excepturi tempore neque cupiditate. Ut unde autem dolores, accusamus, magnam pariatur, facere corrupti doloribus obcaecati fugiat earum quis nisi.</p>
 
-            {# heading starts with numbers to test anchorjs invalid selectors #}
-            <h2>350.org</h2>
+              <h2>350.org</h2>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit expedita hic, rerum doloremque ab illo facere fuga ducimus minima quisquam eius sunt! Minus, rem aspernatur quasi nihil numquam ipsum a!</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit expedita hic, rerum doloremque ab illo facere fuga ducimus minima quisquam eius sunt! Minus, rem aspernatur quasi nihil numquam ipsum a!</p>'
+            }%}
+
+            {% include 'paragraphs/chart-group.twig' with {
+              title: 'Horizontal Bar chart',
+              text: true,
+              items: [
+                {
+                  type: 'horizontalBar',
+                  title: 'chart 1',
+                  suffix: '%',
+                  labels: ["Administration","Advising/Counseling","Analyst/Research","Communications/Marketing/PR","Management/Strategic Planning","Operations/Project Management","Sales/Account Management","Teaching/Training","Translation/Interpretation","Other"],
+                  datasets: [
+                    { label: 'Percentage of employment', data: [41,14,4,10,4,18,2,4,1,2] }
+                  ]
+                }
+              ]
+            } %}
+
+            {% include 'paragraphs/chart-group.twig' with {
+              title: 'Some pie chart',
+              text: true,
+              items: [
+                {
+                  type: 'pie',
+                  title: 'chart 1',
+                  labels: ['label 1', 'label 2', 'label 3'],
+                  datasets: [ { label: 'data 1', data: [1,2,3] },  { label: 'data 1', data: [3,2,6] }  ]
+                },
+                {
+                  type: 'doughnut',
+                  title: 'chart 1',
+                  labels: ['label 1', 'label 2', 'label 3'],
+                  datasets: [ { label: 'data 1', data: [1,2,3] }, { label: 'data 1', data: [1,9,5] }  ]
+                }
+              ]
+            } %}
+
+
+            {% include 'paragraphs/chart-group.twig' with {
+              title: 'Chart group',
+              text: true,
+              items: [
+                {
+                  type: 'pie',
+                  title: 'chart 1',
+                  labels: ['label 1', 'label 2', 'label 3'],
+                  datasets: [ { label: 'data 1', data: [1,2,3] } ]
+                },
+                {
+                  type: 'doughnut',
+                  title: 'chart 2',
+                  labels: ['label 1', 'label 2', 'label 3'],
+                  datasets: [ { label: 'data 1', data: [3,10,20] } ]
+                },
+                {
+                  type: 'doughnut',
+                  title: 'chart 3',
+                  labels: ['label 1', 'label 2', 'label 3'],
+                  datasets: [ { label: 'data 1', data: [13,2,12] } ]
+                }
+              ]
+            } %}
+
+            {% include 'paragraphs/chart-group.twig' with {
+              title: 'Line charts',
+              items: [
+                {
+                  type: 'line',
+                  title: 'chart 1',
+                  labels: ['2019', '2020', '2021', '2022'],
+                  datasets: [ { label: 'data 1', data: [3,6,13,30] } ]
+                },
+                {
+                  type: 'line',
+                  title: 'chart 2',
+                  labels: ['2019', '2020', '2021', '2022'],
+                  datasets: [ { label: 'data 1', data: [6,17,29,50] } ]
+                },
+              ]
+            } %}
+
+
+            {% include 'paragraphs/chart-group.twig' with {
+              title: 'Line charts',
+              items: [
+                {
+                  type: 'line',
+                  title: 'chart 1',
+                  labels: ['2019', '2020', '2021', '2022'],
+                  datasets: [
+                    { label: 'data 1', data: [3,-6,13,-30] },
+                    { label: 'data 2', data: [70,25,-4,44] },
+                    { label: 'data 3', data: [13,-15,-9,52] },
+                  ]
+                },
+                {
+                  type: 'line',
+                  title: 'chart 2',
+                  labels: ['2019', '2020', '2021', '2022'],
+                  datasets: [
+                    { label: 'data 1', data: [19,17,29,-50] },
+                    { label: 'data 2', data: [25,-11,34,56] },
+                    { label: 'data 3', data: [101,-17,37,-28] }
+                  ]
+                },
+              ]
+            } %}
+
+            {% include 'paragraphs/chart-group.twig' with {
+              title: 'Percentage bar',
+              items: [
+                {
+                  type: 'percentBar',
+                  title: 'chart 1',
+                  labels: ['Bananas', 'Apples', 'Oranges', 'Plums', 'Pears', 'Grapes'],
+                  datasets: [ { label: 'data set 1', data: [39, 24, 63, 57, 53, 353] }, ],
+                },
+              ]
+            } %}
+
+            {% include 'paragraphs/chart-group.twig' with {
+              title: 'Internships',
+              items: [
+                { type: 'stats', number: 90, label: 'on-campus info sessions with employers', },
+                { type: 'stats', number: 500, label: 'on-campus interviews' },
+                { type: 'stats', number: 2500.53, label: 'Opportunities in our online database', },
+                { type: 'stats', number: 600.23, prefix: '$', suffix: 'k', label: 'of summer internship funding', },
+                { type: 'stats', number: 800, label: 'Summer internships', },
+                { type: 'stats', number: 7500, suffix: '+', label: 'Alumni Career volunteers', },
+              ]
+            } %}
 
           </div>
         {% endblock %}
