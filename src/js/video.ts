@@ -1,7 +1,14 @@
-import {decodeHtml, on, $, $$} from './utils';
+import {decodeHtml, on, $, $$} from './utils/utils';
 
 class VideoSwap {
-  constructor(elem) {
+  elem: HTMLElement;
+  activeClass: string;
+  content: HTMLElement | null;
+  link: HTMLElement | null;
+
+  iframe: string | null;
+
+  constructor(elem: HTMLElement) {
     this.elem = elem;
     this.content = $('.js-video-content', elem);
     this.link = $('.js-video-link', elem);
@@ -18,7 +25,6 @@ class VideoSwap {
 
   addListeners() {
     if(this.link) {
-      console.log(this.link);
       on(this.link, 'click', this.handleVideoEmbedClick);
       on(this.link, 'keydown', this.handleKeyUp);
     }
@@ -35,26 +41,25 @@ class VideoSwap {
     const html = decodeHtml(this.iframe);
     
     if (this.content) {
-      console.log(this.content);
       this.content.innerHTML = html || this.iframe;
     }
   }
 
-  handleKeyUp = (e) => {
+  handleKeyUp = (e: KeyboardEvent) => {
     if(e.key === " " || e.key === "Spacebar") {
       e.preventDefault();
       this.showVideo();
     }
   };
 
-  handleVideoEmbedClick = (e) => {
+  handleVideoEmbedClick = (e: Event) => {
     e.preventDefault();
     this.showVideo();
   };
 }
 
 const elem = $$('.js-video');
-console.log(elem);
+
 elem.forEach((elem) => new VideoSwap(elem));
 
 export default VideoSwap;
