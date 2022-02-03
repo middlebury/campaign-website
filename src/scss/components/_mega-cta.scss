@@ -21,49 +21,42 @@
     & h2 {
       font-family: $font-family-sans-primary;
       font-size: rem(38);
-      font-weight: $font-weight-normal;
+      font-weight: $font-weight-semibold;
       line-height: $line-height-5;
       text-align: center;
       letter-spacing: $letter-spacing;
+      padding-bottom: $spacing-2;
     }
 
     & p {
-      font-family: $font-family-sans-secondary;
       font-weight: $font-weight-medium;
-      font-size: $typescale-7;
+      font-size: $typescale-6;
       line-height: $line-height-5;
+      margin: 0;
     }
 
     & h3 {
-      font-family: $font-family-serif;
       font-size: $typescale-4;
       font-weight: $font-weight-bold;
       padding-top: $spacing-5;
+      line-height: $line-height-9;
     }
 
-    & ul {
-      display: flex;
-      justify-content: center;
-      line-height: $line-height-3;
-      padding-top: $spacing-2;
+    & p > a {
+      line-height: $line-height-9;
       font-size: $typescale-3;
       font-weight: $font-weight-semibold;
+      padding-right: rem(12);
 
-      & li {
-        padding-right: rem(12);
-
-        &:not(:first-child) {
-          padding-left: rem(12);
-        }
-
-        &:not(:last-child) {
-          border-right: 1px solid $white;
-        }
-
-        & a {
-          color: $white;
-        }
+      &:not(:first-child) {
+        padding-left: rem(12);
       }
+
+      &:not(:last-child) {
+        border-right: 1px solid $white;
+      }
+
+      color: $white;
     }
   }
 }
