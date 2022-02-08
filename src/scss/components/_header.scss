@@ -1,17 +1,109 @@
+.header__wrapper {
+  &.has-toggler {
+    .header__nav-handle--close {
+      display: none;
+    }
+
+    .mega-menu {
+      transition: opacity 0.1s;
+      opacity: 0;
+    }
+  }
+  
+  &.is-toggled {
+    color: $white;
+
+    .header {
+      border-bottom: 3.25px solid $color-navy;
+    }
+
+    .header__nav {
+      & .nav__item {
+        &:not(:last-child) {
+          border-right: solid 1px #fff;
+        }
+      }
+
+      & .nav__link {
+        &:hover, &:focus {
+          border-top: 2px solid #fff;
+        }
+      }
+    }
+
+    .mega-menu {
+      opacity: 1;
+    }
+
+    svg path {
+      fill: $white;
+    }
+
+    .header__nav-handle {
+      color: $white;
+
+      &--menu {
+        display: none;
+      }
+
+      &--close {
+        display: flex;
+      }
+    }
+  }
+}
+
 .header {
   background: $white;
   display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   color: $color-navy;
   position: relative;
   padding-right: $spacing-5;
   padding-left: $spacing-5;
   padding-bottom: $spacing-3;
   margin-bottom: $spacing-5;
-  border-bottom: 3.25px solid $black;
+  border-bottom: 3.25px solid $gray-dark;
+
+  .header__wrapper.is-toggled & {
+    background-color: $color-navy;
+    & a {
+      color: $white;
+    }
+  }
+
+  &__menu-icon {
+    color: $color-navy;
+  }
+
+  &__close-icon {
+    color: $white;
+  }
+}
+
+.header__left-nav {
+  display: flex;
+}
+
+.header__dropdowns {
+  display: none;
+
+  @include breakpoint(xl) {
+    display: initial;
+  }
 }
 
 .header__logo {
   padding-top: $spacing-3;
+}
+
+.header__times {
+  display: none;
+
+  .header__handle.is-toggled & {
+    display: inline-block;
+  }
 }
 
 .header__nav {
@@ -33,7 +125,7 @@
 
   & .nav__link {
     text-transform: capitalize;
-    color: $color-navy;
+    // color: $color-navy;
     text-decoration: none;
     margin-right: $spacing-4;
     border-top: 2px solid transparent;
@@ -43,6 +135,12 @@
       border-top: 2px solid #0d395f;
     }
   }
+}
+
+.header__nav-handle {
+  line-height: $line-height-1;
+  margin-top: $spacing-4;
+  color: $color-navy;
 }
 
 // nav lists

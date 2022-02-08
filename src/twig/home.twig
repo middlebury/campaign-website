@@ -184,3 +184,15 @@
   </div>
    <script src="/js/Chart.min.js"></script>
 {% endblock %}
+
+{% block layout_before_body_close %}
+  {% embed 'partials/drawer.twig'
+    with {
+      title: 'Navigation'
+    }
+  %}
+    {% block content %}
+      {% include 'partials/drawer-nav.twig' %}
+    {% endblock %}
+  {% endembed %}
+{% endblock %}

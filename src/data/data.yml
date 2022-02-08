@@ -23,3 +23,46 @@ secondary_footer_nav:
   - text: Site-Editor Login
     href: '#'
 
+mega_menu: 
+  items:
+    - text: About the College
+      items:
+        - text: Liberal Arts at Middlebury
+        - text: Faculty Directory
+        - text: Departments and Programs
+        - text: The Library
+        - text: J-Term
+        - text: Summer Studies
+        - text: Study Abroad
+        - text: Academic Resources and Centers
+        - text: Academic Calendar
+    - text: Life at Middlebury
+    - text: Academics
+      items:
+        - text: Liberal Arts at Middlebury
+        - text: Faculty Directory
+        - text: Departments and Programs
+        - text: The Library
+    - text: Admissions
+    - text: News
+    - text: Events
+menus:
+  items:
+    - text: Access
+    - text: Experience
+    - text: Academic Excellence
+    - text: Capital Projects
+    - text: Philanthropy in Action
+    - text: Ways to Give
+capital_projects: 
+  items:
+    - text: First-Year Residential Complex
+    - text: Student Center
+    - text: Art Museum
+    - text: Middlebury Institute Master Plan
+    - text: Philanthropy in Action
+    - text: Ways to Give
+submenu:
+  items: 
+    - text: Story A
+    - text: Story B

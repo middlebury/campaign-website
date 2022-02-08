@@ -1,0 +1,29 @@
+<div class="mega-menu" id="header__nav-handle">
+  <div class="container px-0">
+    <div class="col-lg-9 px-0 mega-menu__wrapper">
+      <div class="row ml-0">
+          {% for name in menus.items %}
+            <div class="col-lg-4 mega-menu__sub-nav">
+              <div class="mega-menu__items">
+                <h3>{{ name.text }}</h3>
+                <ul>
+                  {% for i in 0..random(3) %}
+                  <li>
+                    <a href="#">{{ capital_projects.items[i].text }}</a>
+                    {% if env.test or random(1) %}
+                      <ul>
+                        {% for j in 0..random(1) %}
+                          <li><a href="#">{{ submenu.items[j].text }}</a></li>
+                        {% endfor %}
+                      </ul>
+                    {% endif %}
+                  </li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
+          {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
