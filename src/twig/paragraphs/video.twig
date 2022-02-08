@@ -9,7 +9,7 @@
         aria-describedby="midd-video-label-{{id}}" 
       >
         {% include 'partials/img.twig' with { name: 'video' } %}
-        <div class="video__front">
+        <div class="video__front {{video_title ? "video__front--gradient" : ""}}">
           {% if video_title %}
             <h3 class="video__title" id="midd-video-label-{{id}}">{{video_title}}</h3>
           {% endif %}
