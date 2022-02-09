@@ -8,9 +8,14 @@
   z-index: $z-index-drawer;
   text-transform: capitalize;
   color: $color-navy !important;
+  // height: fit-content;
 
   &.is-open {
     display: block;
+
+    @include breakpoint(lg) {
+      display: none;
+    }
   }
 }
 
@@ -22,6 +27,7 @@
   bottom: 0;
   left: 0;
   z-index: $z-index-drawer-overlay;
+  overflow-y: auto;
   animation: fadeIn 0.2s;
 }
 
@@ -32,7 +38,7 @@
   bottom: 0;
   width: 300px;
   max-width: 100%;
-  overflow-y: auto;
+  height: fit-content;
   -webkit-overflow-scrolling: touch;
   z-index: $z-index-drawer-content;
   animation: slideInRight 0.2s;
@@ -43,8 +49,7 @@
 
 .drawer__header {
   text-align: right;
-  padding-top: $spacing-3;
-  padding-bottom: $spacing-3;
+  background: $color-navy;
 }
 
 .drawer__close {
@@ -53,4 +58,13 @@
   color: $white;
   padding: $spacing-3;
   font-size: $typescale-2;
+
+  svg {
+    height: $typescale-5;
+    width: $typescale-5;
+
+    path {
+      fill: $color-navy;
+    }
+  }
 }

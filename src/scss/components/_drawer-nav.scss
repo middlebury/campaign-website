@@ -17,7 +17,12 @@ $drawer-nav-color: $gray-light;
 }
 
 .drawer-nav__chevron {
+  &.icon {
+    width: $typescale-5;
+    height: $typescale-5;
+  }
   transition: $chevron-transition;
+  
   .drawer-nav__handle.is-toggled & {
     transform: $chevron-transform;
   }
@@ -48,9 +53,15 @@ $drawer-nav-color: $gray-light;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  & > ul .drawer-nav__link {
+    font-weight: $font-weight-medium; 
+  }
 }
 
 .drawer-nav__link {
+  font-size: $typescale-2;
+  font-weight: $font-weight-bold;
   display: block;
   padding: $spacing-3;
   color: $color-navy;
@@ -59,12 +70,13 @@ $drawer-nav-color: $gray-light;
 }
 
 .drawer-nav__link--sub {
-  padding-left: $spacing-7;
-  font-size: $typescale-2;
-}
+  padding-left: rem(40);
 
-.drawer-nav__link--top {
-  font-weight: $font-weight-medium;
+  &-item {
+    padding-left: $spacing-7;
+  }
+  
+  font-size: $typescale-2;
 }
 
 .drawer-nav__link--util {

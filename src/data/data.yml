@@ -25,27 +25,41 @@ secondary_footer_nav:
 
 mega_menu: 
   items:
-    - text: About the College
+    - text: Access
       items:
-        - text: Liberal Arts at Middlebury
-        - text: Faculty Directory
-        - text: Departments and Programs
-        - text: The Library
-        - text: J-Term
-        - text: Summer Studies
-        - text: Study Abroad
-        - text: Academic Resources and Centers
-        - text: Academic Calendar
-    - text: Life at Middlebury
-    - text: Academics
+        - text: First-Year Residential Complex
+        - text: Student Center
+        - text: Art Museum
+        - text: Middlebury Institute Master Plan
+        - text: Philanthropy in Action
+        - text: Ways to Give
+    - text: Experience
       items:
-        - text: Liberal Arts at Middlebury
-        - text: Faculty Directory
-        - text: Departments and Programs
-        - text: The Library
-    - text: Admissions
-    - text: News
-    - text: Events
+        - text: First-Year Residential Complex
+        - text: Student Center
+        - text: Art Museum
+        - text: Middlebury Institute Master Plan
+        - text: Philanthropy in Action
+        - text: Ways to Give
+    - text: Academic Excellence
+      items:
+        - text: First-Year Residential Complex
+        - text: Student Center
+        - text: Art Museum
+        - text: Middlebury Institute Master Plan
+        - text: Philanthropy in Action
+        - text: Ways to Give
+    - text: Capital Projects
+      items:
+        - text: First-Year Residential Complex
+        - text: Student Center
+        - text: Art Museum
+        - text: Middlebury Institute Master Plan
+    - text: Philanthropy in Action
+      items:
+        - text: Story A
+        - text: Story B
+    - text: Ways to Give
 menus:
   items:
     - text: Access

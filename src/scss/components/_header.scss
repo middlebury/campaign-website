@@ -5,49 +5,53 @@
     }
 
     .mega-menu {
-      transition: opacity 0.1s;
-      opacity: 0;
+      @include breakpoint(lg) {
+        transition: opacity 0.1s;
+        opacity: 0;
+      }
     }
   }
   
   &.is-toggled {
-    color: $white;
-
-    .header {
-      border-bottom: 3.25px solid $color-navy;
-    }
-
-    .header__nav {
-      & .nav__item {
-        &:not(:last-child) {
-          border-right: solid 1px #fff;
-        }
-      }
-
-      & .nav__link {
-        &:hover, &:focus {
-          border-top: 2px solid #fff;
-        }
-      }
-    }
-
-    .mega-menu {
-      opacity: 1;
-    }
-
-    svg path {
-      fill: $white;
-    }
-
-    .header__nav-handle {
+    @include breakpoint(lg) {
       color: $white;
 
-      &--menu {
-        display: none;
+      .header {
+        border-bottom: 3.25px solid $color-navy;
       }
 
-      &--close {
-        display: flex;
+      .header__nav {
+        & .nav__item {
+          &:not(:last-child) {
+            border-right: solid 1px #fff;
+          }
+        }
+
+        & .nav__link {
+          &:hover, &:focus {
+            border-top: 2px solid #fff;
+          }
+        }
+      }
+
+      .mega-menu {
+          opacity: 1;
+      }
+
+      svg path {
+        fill: $white;
+      }
+
+      .header__nav-handle {
+        color: $white;
+
+        &--menu {
+          display: none;
+        }
+
+        &--close {
+          display: flex;
+        }
       }
     }
   }
@@ -67,9 +71,11 @@
   border-bottom: 3.25px solid $gray-dark;
 
   .header__wrapper.is-toggled & {
-    background-color: $color-navy;
-    & a {
-      color: $white;
+    @include breakpoint(lg) {
+      background-color: $color-navy;
+      & a {
+        color: $white;
+      }
     }
   }
 
@@ -89,7 +95,7 @@
 .header__dropdowns {
   display: none;
 
-  @include breakpoint(xl) {
+  @include breakpoint(lg) {
     display: initial;
   }
 }

@@ -6,7 +6,12 @@
    border-bottom: 4px solid #0d394f;
    padding-top: $spacing-5;
    padding-bottom: $spacing-7;
+   display: none;
   //  opacity: 0;
+
+  @include breakpoint(lg) {
+    display: block;
+  }
 }
 
 .mega-menu__wrapper {

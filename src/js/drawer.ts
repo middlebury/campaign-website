@@ -1,6 +1,6 @@
-import Micromodal from 'micromodal';
+import MicroModal from 'micromodal';
 
-Micromodal.init({
+MicroModal.init({
   openTrigger: 'data-drawer',
   closeTrigger: 'data-drawer-close',
   disableScroll: true

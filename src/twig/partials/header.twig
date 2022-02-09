@@ -31,9 +31,10 @@
       data-toggle-target=".header__wrapper"
       data-drawer="midd-nav-drawer"
       aria-label="Open navigation"
+      data-drawer-close
     >
       <div class="header__nav-handle--menu d-flex align-items-center">
-        <span class="d-none d-sm-inline mr-2">MENU</span>
+        <span class="d-inline mr-2">MENU</span>
         {% include 'partials/icon.twig' with { name: 'bars', class: 'header__menu-icon' } %}
       </div>
       <div class="header__nav-handle--close d-flex align-items-center">
