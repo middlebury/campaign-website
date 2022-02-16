@@ -38,11 +38,10 @@ figure {
 
 hr {
  width: calc(100vw - 64px);
- background-color: $gray-light;
  margin: $spacing-5 0;
  margin-left: calc(50% - 50vw + 32px);
- height: 0.25px;
  border: 0;
+ border-top: 1px solid $gray-light;
 }
 
 a {
