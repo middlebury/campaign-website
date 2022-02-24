@@ -1,0 +1,70 @@
+.drawer {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: $z-index-drawer;
+  text-transform: capitalize;
+  color: $color-navy !important;
+  // height: fit-content;
+
+  &.is-open {
+    display: block;
+
+    @include breakpoint(lg) {
+      display: none;
+    }
+  }
+}
+
+.drawer__overlay {
+  background: rgba($black, 0.75);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: $z-index-drawer-overlay;
+  overflow-y: auto;
+  animation: fadeIn 0.2s;
+}
+
+.drawer__content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 300px;
+  max-width: 100%;
+  height: fit-content;
+  -webkit-overflow-scrolling: touch;
+  z-index: $z-index-drawer-content;
+  animation: slideInRight 0.2s;
+
+  // TODO: Move this elsewhere. Drawer should be an object, not aware of theming.
+  background: $white;
+}
+
+.drawer__header {
+  text-align: right;
+  background: $color-navy;
+}
+
+.drawer__close {
+  background: none;
+  border: 0;
+  color: $white;
+  padding: $spacing-3;
+  font-size: $typescale-2;
+
+  svg {
+    height: $typescale-5;
+    width: $typescale-5;
+
+    path {
+      fill: $color-navy;
+    }
+  }
+}

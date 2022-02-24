@@ -23,3 +23,60 @@ secondary_footer_nav:
   - text: Site-Editor Login
     href: '#'
 
+mega_menu: 
+  items:
+    - text: Access
+      items:
+        - text: First-Year Residential Complex
+        - text: Student Center
+        - text: Art Museum
+        - text: Middlebury Institute Master Plan
+        - text: Philanthropy in Action
+        - text: Ways to Give
+    - text: Experience
+      items:
+        - text: First-Year Residential Complex
+        - text: Student Center
+        - text: Art Museum
+        - text: Middlebury Institute Master Plan
+        - text: Philanthropy in Action
+        - text: Ways to Give
+    - text: Academic Excellence
+      items:
+        - text: First-Year Residential Complex
+        - text: Student Center
+        - text: Art Museum
+        - text: Middlebury Institute Master Plan
+        - text: Philanthropy in Action
+        - text: Ways to Give
+    - text: Capital Projects
+      items:
+        - text: First-Year Residential Complex
+        - text: Student Center
+        - text: Art Museum
+        - text: Middlebury Institute Master Plan
+    - text: Philanthropy in Action
+      items:
+        - text: Story A
+        - text: Story B
+    - text: Ways to Give
+menus:
+  items:
+    - text: Access
+    - text: Experience
+    - text: Academic Excellence
+    - text: Capital Projects
+    - text: Philanthropy in Action
+    - text: Ways to Give
+capital_projects: 
+  items:
+    - text: First-Year Residential Complex
+    - text: Student Center
+    - text: Art Museum
+    - text: Middlebury Institute Master Plan
+    - text: Philanthropy in Action
+    - text: Ways to Give
+submenu:
+  items: 
+    - text: Story A
+    - text: Story B

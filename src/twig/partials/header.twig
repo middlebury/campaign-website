@@ -1,24 +1,47 @@
-<header class="header">
-  <div class="header__logo">
-    <a>
-      <span class="visually-hidden">Middlebury Campaign Website</span>
-      <span>
-        {% include '../../img/campaign-logo.svg' %}
-      </span>
-    </a>
-  </div>
-
-  <div class="header__dropdowns">
-    <nav class="header__nav">
-      <div class="header__menu">
-        <ul class="nav">
-          {% for item in site_nav.items %}
-            <li class="nav__item">
-              <a href="#" class="nav__link">{{ item.text }}</a>
-            </li>
-          {% endfor %}
-        </ul>
+<header class="header__wrapper">
+  <div class="header">
+    <div class="header__left-nav">
+      <div class="header__logo">
+        <a>
+          <span class="visually-hidden">Middlebury Campaign Website</span>
+          <span>
+            {% include '../../img/campaign-logo.svg' %}
+          </span>
+        </a>
       </div>
-    </nav>
+
+      <div class="header__dropdowns">
+        <nav class="header__nav" aria-labelledby="midd-main-nav-label">
+          <div class="header__menu">
+            <h2 class="visually-hidden" id="midd-main-nav-label">Main navigation</h2>
+            <ul class="nav">
+              {% for item in site_nav.items %}
+                <li class="nav__item">
+                  <a href="#" class="nav__link">{{ item.text }}</a>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+
+    <button
+      class="header__nav-handle"
+      data-toggle-target=".header__wrapper"
+      data-drawer="midd-nav-drawer"
+      aria-label="Open navigation"
+      data-drawer-close
+    >
+      <div class="header__nav-handle--menu d-flex align-items-center">
+        <span class="d-inline mr-2">MENU</span>
+        {% include 'partials/icon.twig' with { name: 'bars', class: 'header__menu-icon' } %}
+      </div>
+      <div class="header__nav-handle--close d-flex align-items-center">
+        {% include 'partials/icon.twig' with { name: 'times', class: 'header__close-icon' } %}
+        <span class="d-none d-sm-inline ml-2">CLOSE</span>
+      </div>
+    </button>
   </div>
+  {% include 'partials/mega-menu.twig' %}
 </header>

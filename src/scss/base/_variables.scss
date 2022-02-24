@@ -38,6 +38,7 @@ $container-width-md: 864px;
 
 // Color system
 $color-navy: #0d395f;
+$navy-light: #174872;
 $color-navy-dark: #022543;
 $gray-dark: #202020;
 $gray-light: #dedede;
@@ -123,6 +124,15 @@ $letter-spacing: -0.5px;
 // Body
 $body-bg: $white !default;
 $body-color: $gray-dark !default;
+
+$chevron-transform: rotate(-180deg);
+$chevron-transition: transform 0.2s ease-in-out;
+
+$z-index-drawer: 300;
+$z-index-drawer-overlay: 2;
+$z-index-drawer-content: 3;
+$z-index-mega-menu: 20;
+$z-index-video-button: 10;
 
 //// Element Styles
 

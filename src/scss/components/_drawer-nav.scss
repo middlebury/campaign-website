@@ -1,0 +1,85 @@
+$drawer-nav-color: $gray-light;
+
+.drawer {
+  color: $color-navy;
+}
+
+.drawer-nav__handle {
+  background: none;
+  border: 0;
+  display: inline-block;
+  padding: $spacing-3;
+  font-size: $typescale-2;
+  font-weight: $font-weight-medium;
+  line-height: $line-height-7;
+  color: $white;
+  border-left: 1px solid $drawer-nav-color;
+}
+
+.drawer-nav__chevron {
+  &.icon {
+    width: $typescale-5;
+    height: $typescale-5;
+  }
+  transition: $chevron-transition;
+  
+  .drawer-nav__handle.is-toggled & {
+    transform: $chevron-transform;
+  }
+}
+
+.drawer-nav__list {
+  width: 100%;
+}
+
+.drawer-nav__list--util {
+  border-top: 4px solid $drawer-nav-color;
+}
+
+.drawer-nav__list--top {
+}
+
+.drawer-nav__list--sub {
+  display: none;
+
+  &.is-toggled {
+    display: block;
+  }
+}
+
+.drawer-nav__item {
+  position: relative;
+  border-top: 1px solid $drawer-nav-color;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  & > ul .drawer-nav__link {
+    font-weight: $font-weight-medium; 
+  }
+}
+
+.drawer-nav__link {
+  font-size: $typescale-2;
+  font-weight: $font-weight-bold;
+  display: block;
+  padding: $spacing-3;
+  color: $color-navy;
+  flex: 1;
+  text-decoration: none;
+}
+
+.drawer-nav__link--sub {
+  padding-left: rem(40);
+
+  &-item {
+    padding-left: $spacing-7;
+  }
+  
+  font-size: $typescale-2;
+}
+
+.drawer-nav__link--util {
+  font-size: $typescale-2;
+  font-weight: normal;
+}
