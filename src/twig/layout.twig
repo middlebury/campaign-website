@@ -18,10 +18,17 @@
   {% include 'partials/header.twig' %}
 
   <main id="main">
+    {% if page_header %}
+      {% include 'partials/page-header.twig' with {
+          page_header,
+          menu_items
+        } %}
+      {% include 'paragraphs/image.twig' with { name: "basic_image", banner: true } %}
+    {% endif %}
     {% block content %}{% endblock %}
   </main>
 
-  {% include 'partials/footer.twig' %}  
+  {% include 'partials/footer.twig' %}
   
   {% block layout_before_body_close %}{% endblock %}
   <script src="js/bundle.js" async></script>

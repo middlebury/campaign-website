@@ -40,8 +40,11 @@ $container-width-md: 864px;
 $color-navy: #0d395f;
 $navy-light: #174872;
 $color-navy-dark: #022543;
+$color-navy-light: #75A3CD;
 $gray-dark: #202020;
 $gray-light: #dedede;
+
+$sky: #0573cd;
 
 $white: #fff;
 $black: #000;
@@ -152,3 +155,6 @@ $headings-line-height: $line-height-5;
 $paragraph-font-size: $typescale-4 !default;
 $paragraph-line-height: $line-height-7 !default;
 $paragraph-margin-bottom: $spacing-4 !default;
+
+$basic-content-menu-border-y: 4px solid $color-navy;
+$basic-content-menu-border-x: 1px solid $gray-light;
