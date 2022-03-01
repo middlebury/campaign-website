@@ -94,7 +94,8 @@
       </div>
     </button>
   </div>
-  <div class="mega-menu" id="header__nav-handle">
+  <nav class="mega-menu" id="header__nav-handle" aria-labelledby="midd-drawer-nav-label">
+  <h2 class="visually-hidden" id="midd-drawer-nav-label">Navigation</h2>
   <div class="container px-0">
     <div class="col-lg-9 px-0 mega-menu__wrapper">
       <div class="row ml-0">
@@ -104,6 +105,12 @@
                 <ul>
                                     <li>
                     <a href="#">First-Year Residential Complex</a>
+                                          <ul>
+                                                  <li><a href="#">Story A</a></li>
+                                              </ul>
+                                      </li>
+                                    <li>
+                    <a href="#">Student Center</a>
                                           <ul>
                                                   <li><a href="#">Story A</a></li>
                                               </ul>
@@ -121,12 +128,6 @@
                                                   <li><a href="#">Story A</a></li>
                                               </ul>
                                       </li>
-                                    <li>
-                    <a href="#">Student Center</a>
-                                      </li>
-                                    <li>
-                    <a href="#">Art Museum</a>
-                                      </li>
                                   </ul>
               </div>
             </div>
@@ -138,11 +139,13 @@
                     <a href="#">First-Year Residential Complex</a>
                                           <ul>
                                                   <li><a href="#">Story A</a></li>
-                                                  <li><a href="#">Story B</a></li>
                                               </ul>
                                       </li>
                                     <li>
                     <a href="#">Student Center</a>
+                                      </li>
+                                    <li>
+                    <a href="#">Art Museum</a>
                                           <ul>
                                                   <li><a href="#">Story A</a></li>
                                               </ul>
@@ -160,12 +163,6 @@
                                     <li>
                     <a href="#">Student Center</a>
                                       </li>
-                                    <li>
-                    <a href="#">Art Museum</a>
-                                          <ul>
-                                                  <li><a href="#">Story A</a></li>
-                                              </ul>
-                                      </li>
                                   </ul>
               </div>
             </div>
@@ -175,24 +172,6 @@
                 <ul>
                                     <li>
                     <a href="#">First-Year Residential Complex</a>
-                                      </li>
-                                    <li>
-                    <a href="#">Student Center</a>
-                                          <ul>
-                                                  <li><a href="#">Story A</a></li>
-                                              </ul>
-                                      </li>
-                                    <li>
-                    <a href="#">Art Museum</a>
-                                          <ul>
-                                                  <li><a href="#">Story A</a></li>
-                                              </ul>
-                                      </li>
-                                    <li>
-                    <a href="#">Middlebury Institute Master Plan</a>
-                                          <ul>
-                                                  <li><a href="#">Story A</a></li>
-                                              </ul>
                                       </li>
                                   </ul>
               </div>
@@ -210,6 +189,12 @@
                                       </li>
                                     <li>
                     <a href="#">Student Center</a>
+                                      </li>
+                                    <li>
+                    <a href="#">Art Museum</a>
+                                      </li>
+                                    <li>
+                    <a href="#">Middlebury Institute Master Plan</a>
                                           <ul>
                                                   <li><a href="#">Story A</a></li>
                                                   <li><a href="#">Story B</a></li>
@@ -221,9 +206,9 @@
                 </div>
     </div>
   </div>
-</div></header>
+</nav></header>
   <main id="main">
-      <div class="container">
+          <div class="container">
     <div class="row">
       
       <div class="paragraphs paragraphs--wide">
@@ -259,10 +244,8 @@
   </div>
 </div>          <hr>
           <div class="paragraph--text text">
-  <div class="container">
-    <div class="col-md-10 offset-md-1">
+  <div class="text--container">
       <p>Middlebury is a private institution, but we’re also a public good. <br> And a public good should be accessible to all, regardless of financial means.</p>
-    </div>
   </div>
 </div>          <hr>
           <div class="paragraph--full paragraph--video-group">
@@ -279,7 +262,7 @@
         class="js-video-link video__link"
         role="button"
         aria-label="Play video"
-        aria-describedby="midd-video-label-818" 
+        aria-describedby="midd-video-label-375" 
       >
           
   
@@ -299,7 +282,7 @@
   <img src="https://via.placeholder.com/896x504" srcset="https://via.placeholder.com/400x225 400w,https://via.placeholder.com/640x360 640w,https://via.placeholder.com/896x504 896w"  sizes="(max-width: 896px) 100vw, 896px"  alt=""/>
 
         <div class="video__front video__front--gradient">
-                      <h3 class="video__title" id="midd-video-label-818">This is the video title</h3>
+                      <h3 class="video__title" id="midd-video-label-375">This is the video title</h3>
                     <span class="button button--primary video__button">
             <span class="video__button--text-before">52 seconds</span><span class="video__button--text-after">Play
                 <span class="ml-2">
@@ -313,17 +296,17 @@
       </a>
     </div>
   <figcaption>
-        <div class="transcript js-transcript-818 ">
-  <a href="#midd-transcript-818"
+        <div class="transcript js-transcript-375 ">
+  <a href="#midd-transcript-375"
     class="transcript__button"
-    data-toggle-target=".js-transcript-818"
+    data-toggle-target=".js-transcript-375"
     aria-label="Toggle transcript"
     aria-expanded="false"
     role="button"
   >
     Transcript
   </a>
-  <div class="transcript__body" id="midd-transcript-818">
+  <div class="transcript__body" id="midd-transcript-375">
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, amet aut et maxime dolorum accusamus iste quia labore nulla doloremque aliquam repudiandae, voluptates reiciendis ratione, tempora magnam repellendus distinctio debitis!</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, amet aut et maxime dolorum accusamus iste quia labore nulla doloremque aliquam repudiandae, voluptates reiciendis ratione, tempora magnam repellendus distinctio debitis!</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, amet aut et maxime dolorum accusamus iste quia labore nulla doloremque aliquam repudiandae, voluptates reiciendis ratione, tempora magnam repellendus distinctio debitis!</p>
@@ -338,7 +321,7 @@
         class="js-video-link video__link"
         role="button"
         aria-label="Play video"
-        aria-describedby="midd-video-label-1046" 
+        aria-describedby="midd-video-label-472" 
       >
           
   
@@ -358,7 +341,7 @@
   <img src="https://via.placeholder.com/896x504" srcset="https://via.placeholder.com/400x225 400w,https://via.placeholder.com/640x360 640w,https://via.placeholder.com/896x504 896w"  sizes="(max-width: 896px) 100vw, 896px"  alt=""/>
 
         <div class="video__front video__front--gradient">
-                      <h3 class="video__title" id="midd-video-label-1046">This is the video title</h3>
+                      <h3 class="video__title" id="midd-video-label-472">This is the video title</h3>
                     <span class="button button--primary video__button">
             <span class="video__button--text-before">52 seconds</span><span class="video__button--text-after">Play
                 <span class="ml-2">
@@ -372,17 +355,17 @@
       </a>
     </div>
   <figcaption>
-        <div class="transcript js-transcript-1046 ">
-  <a href="#midd-transcript-1046"
+        <div class="transcript js-transcript-472 ">
+  <a href="#midd-transcript-472"
     class="transcript__button"
-    data-toggle-target=".js-transcript-1046"
+    data-toggle-target=".js-transcript-472"
     aria-label="Toggle transcript"
     aria-expanded="false"
     role="button"
   >
     Transcript
   </a>
-  <div class="transcript__body" id="midd-transcript-1046">
+  <div class="transcript__body" id="midd-transcript-472">
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, amet aut et maxime dolorum accusamus iste quia labore nulla doloremque aliquam repudiandae, voluptates reiciendis ratione, tempora magnam repellendus distinctio debitis!</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, amet aut et maxime dolorum accusamus iste quia labore nulla doloremque aliquam repudiandae, voluptates reiciendis ratione, tempora magnam repellendus distinctio debitis!</p>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, amet aut et maxime dolorum accusamus iste quia labore nulla doloremque aliquam repudiandae, voluptates reiciendis ratione, tempora magnam repellendus distinctio debitis!</p>
@@ -394,8 +377,7 @@
   </div>
 </div>          <hr>
           <div class="paragraph--text text">
-  <div class="container">
-    <div class="col-md-10 offset-md-1">
+  <div class="text--container">
       <h2 style="font-weight:400">Our Commitment to Access</h2>
             <p>We must keep a Middlebury education affordable.</p> 
 <p>Need-blind in enrollment, we admit the most qualified students and meet every student’s full demonstrated financial need.</p>
@@ -406,7 +388,6 @@
 <a>Read our full statement</a>
 <hr>
             
-    </div>
   </div>
 </div>          <section class="paragraph--tri-story section" aria-labelledby="midd-profile-spotlight-label-1">
   <div class="container">
@@ -589,7 +570,6 @@
     </div>
   </div>
 </nav>  
-  
     <div class="drawer" id="midd-nav-drawer" aria-hidden="true">
   <div class="drawer__overlay" tabindex="-1" data-drawer-close>
     <div class="drawer__content" role="dialog" aria-modal="true" aria-labelledby="midd-modal-1-title">
