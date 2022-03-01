@@ -1,12 +1,15 @@
-.typography {
+.typography .text {
   > :last-child {
     margin-bottom: 0;
   }
 
   p {
+    font-family: $font-family-sans-primary;
     font-size: $paragraph-font-size;
+    font-weight: 400;
+    margin: 0;
     margin-bottom: $spacing-5;
-    line-height: 2;
+    line-height: $line-height-9;
   } 
 
   a {
@@ -74,17 +77,6 @@
     color: currentColor;
     text-decoration: none;
     border: 0;
-  }
-
-  blockquote {
-    font-size: $typescale-7;
-    font-weight: $font-weight-light;
-    line-height: $line-height-6;
-    margin-left: $spacing-5;
-    padding-left: $spacing-3;
-    border-left: 0.25px solid $gray-dark;
-    margin-top: $spacing-6;
-    margin-bottom: $spacing-6;
   }
 
   ul,

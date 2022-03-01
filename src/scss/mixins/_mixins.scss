@@ -38,6 +38,14 @@
   font-family: $font-family-sans-primary;
 }
 
+@mixin small-caps {
+  font-family: $font-family-sans-primary;
+  font-size: $typescale-2;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: $font-weight-semibold;
+}
+
 @mixin absolute-fill {
   position: absolute;
   left: 0;

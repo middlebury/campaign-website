@@ -1,6 +1,10 @@
 .section {
   margin-bottom: $spacing-6;
 
+  &--basic {
+    margin-bottom: $spacing-7;
+  }
+
   &__header {
     margin-bottom: $spacing-6;
     text-align: center;

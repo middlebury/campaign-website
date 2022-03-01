@@ -1,0 +1,127 @@
+.page-header {
+}
+
+.page-header--has-image {
+  padding-top: percentage(2 / 5);
+  height: 0;
+  position: relative;
+  overflow: hidden;
+  min-height: 300px;
+  margin-bottom: $spacing-7;
+
+  img {
+    @include absolute-fill;
+    object-fit: cover;
+    font-family: 'object-fit: cover;';
+  }
+
+  .page-header__title {
+    color: $white;
+    padding-right: $spacing-4; // make room for tooltip on image
+  }
+}
+
+.page-header__figure {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.page-header__caption {
+  position: absolute;
+  right: $spacing-3;
+  bottom: $spacing-7;
+  z-index: 3;
+
+  @include breakpoint(md) {
+    bottom: $spacing-4;
+    right: $spacing-5;
+  }
+}
+
+.page-header__main {
+  .page-header--has-image & {
+    background-image: linear-gradient(to bottom, transparent, $black);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.page-header--has-menu {
+  margin-bottom: 0;
+}
+
+.page-header__content {
+  // padding-top: $spacing-5;
+  // padding-bottom: $spacing-4;
+
+  @include make-col(12);
+  @include make-col-offset(0);
+  padding-left: $spacing-3;
+  padding-right: $spacing-3;
+
+  @include breakpoint(md) {
+    @include make-col-ready;
+    // padding-top: $spacing-6;
+    @include make-col(10);
+    @include make-col-offset(1);
+  }
+
+  // @include breakpoint(lg) {
+    // padding-top: $spacing-7;
+    // padding-bottom: $spacing-7;
+  // }
+
+  .page-header--has-image & {
+    padding-top: $spacing-9;
+    padding-bottom: $spacing-5;
+  }
+
+  .page-header--has-menu & {
+    padding-bottom: $spacing-3;
+
+    @include breakpoint(md) {
+      padding-bottom: $spacing-4;
+    }
+
+    @include breakpoint(lg) {
+      padding-bottom: $spacing-5;
+    }
+  }
+
+  .page-header--has-image.page-header--has-menu & {
+    padding-bottom: $spacing-7;
+  }
+}
+
+.page-header__title {
+  font-size: $typescale-9;
+  font-weight: $font-weight-light;
+  line-height: $line-height-2;
+  margin-top: $spacing-5;
+  margin-bottom: $spacing-4;
+  color: $gray-dark;
+
+  @include breakpoint(lg) {
+    margin-top: $spacing-7;
+    margin-bottom: $spacing-7;
+    font-size: $typescale-10;
+  }
+}
+
+.page-header--app {
+
+  .page-header__title {
+    font-size: $typescale-7;
+
+    @include breakpoint(md) {
+      font-size: $typescale-8;
+    }
+  }
+}

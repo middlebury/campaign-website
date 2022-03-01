@@ -4,6 +4,8 @@
   }
   
   &-item {
+    margin-bottom: $spacing-5;
+
     &__content {
       font-family: $font-family-sans-secondary;
       text-align: center;
@@ -25,6 +27,10 @@
       & a {
         line-height: $line-height-8;
       }
+    }
+
+    @include breakpoint(sm) {
+      margin-bottom: 0;
     }
   }
 }

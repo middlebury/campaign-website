@@ -32,6 +32,11 @@
 %paragraph-full-width {
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
+
+  .typography & {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .paragraphs {
@@ -95,7 +100,7 @@
 
 .paragraph--video {
   margin-top: $spacing-6;
-  margin-bottom: $spacing-6;
+  margin-bottom: $spacing-5;
 }
 
 .paragraph--video-group {
@@ -111,6 +116,7 @@
 .paragraph--image {
   margin-bottom: $spacing-7;
   margin-top: $spacing-7;
+  padding: 0;
 
   &.image--left {
     margin-top: 0;
@@ -126,13 +132,13 @@
 }
 
 .paragraph--image:not(.image--left):not(.image--right) {
-  @include breakpoint(lg) {
+  @include breakpoint(xl) {
     // Main column is 10 wide, so we divide by remaining
     // columns on sides to pull them out to 12 columns.
     // More on these techniques here:
     // https://css-tricks.com/full-width-containers-limited-width-parents/
-    margin-left: calc(-100% * 2 / 12);
-    margin-right: calc(-100% * 2 / 12);
+    // margin-left: calc(-100% * 2 / 12);
+    // margin-right: calc(-100% * 2 / 12);
     @include make-gutters;
   }
 }

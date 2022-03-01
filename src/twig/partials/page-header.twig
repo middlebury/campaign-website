@@ -1,0 +1,36 @@
+<div class="container px-0">
+
+  <header class="page-header{% if image_src %} page-header--has-image{% endif %}{% if has_menu %} page-header--has-menu{% endif %}{% if app_header %} page-header--app{% endif %}" aria-labelledby="midd-page-header-label">
+
+    <div class="page-header__main">
+      <div class="page-header__content">
+
+        <h1 class="page-header__title" id="midd-page-header-label">{{page_header.title}}</h1>
+
+      </div>
+    </div>
+  </header>
+
+  {% from 'partials/page-nav.twig' import list %}
+
+  <nav class="page-nav--header col-md-10 offset-md-1 col-lg-3 offset-lg-0 mb-4" aria-labelledby="midd-page-nav-label">
+    <button
+      class="page-nav__button"
+      data-toggle-target=".js-page-nav"
+      aria-haspopup="true"
+      aria-expanded="false"
+    >
+      Additional Navigation
+      {% include 'partials/icon.twig' with { name: 'chevron-down', class: 'page-nav__icon' } %}
+    </button>
+    <div class="page-nav--header-wrapper js-page-nav">
+      <div class="page-nav__content">
+        <h1 class="page-nav__title" id="midd-page-nav-label">
+          <a href="#" class="page-nav__link">{{menu_items.label|default('Lorem ipsum')}}</a>
+        </h1>
+
+        {{ list(menu_items.items) }}
+      </div>
+    </div>
+  </nav>
+</div>
