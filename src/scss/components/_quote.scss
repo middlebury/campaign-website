@@ -23,3 +23,21 @@
     }
   }
 }
+
+.typography blockquote {
+  font-size: $typescale-7;
+  font-weight: $font-weight-light;
+  line-height: $line-height-6;
+  margin: 0;
+  margin-left: $spacing-3;
+  padding-left: $spacing-3;
+  color: $color-navy-light;
+  border-left: 0.25px solid $color-navy-light;
+  margin-top: $spacing-6;
+  margin-bottom: $spacing-6;
+  text-align: initial;
+
+  @include breakpoint(sm) {
+    margin-left: $spacing-5;
+  }
+}

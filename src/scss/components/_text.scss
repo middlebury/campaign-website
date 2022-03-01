@@ -1,6 +1,10 @@
 .text {
   text-align: center;
-  
+
+  .typography & {
+    text-align: initial;
+  }
+
   & h2,
   & .h2 {
     @include h1;
@@ -16,6 +20,19 @@
     font-weight: $font-weight-light;
     font-size: $typescale-4;
     line-height: $line-height-6;
-    text-transform: capitalize;
+    // text-transform: capitalize;
+  }
+
+  .paragraphs--wide & > &--container {
+    @include make-container;
+    @media print {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    @include breakpoint(md) {
+      @include make-col(10);
+      @include make-col-offset(1);
+    }
   }
 }

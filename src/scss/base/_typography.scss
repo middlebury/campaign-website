@@ -1,20 +1,12 @@
-.typography {
+.typography .text {
   > :last-child {
     margin-bottom: 0;
-  }
-
-  .lead {
-    font-family: $font-family-sans-primary;
-    font-weight: $font-weight-light;
-    font-size: $typescale-7;
-    line-height: 1.8;
-    margin-top: 0;
-    margin-bottom: $spacing-5;
   }
 
   p {
     font-family: $font-family-sans-primary;
     font-size: $paragraph-font-size;
+    font-weight: 400;
     margin: 0;
     margin-bottom: $spacing-5;
     line-height: $line-height-9;
@@ -85,23 +77,6 @@
     color: currentColor;
     text-decoration: none;
     border: 0;
-  }
-
-  blockquote {
-    font-size: $typescale-7;
-    font-weight: $font-weight-light;
-    line-height: $line-height-6;
-    margin: 0;
-    margin-left: $spacing-3;
-    padding-left: $spacing-3;
-    color: $color-navy-light;
-    border-left: 0.25px solid $color-navy-light;
-    margin-top: $spacing-6;
-    margin-bottom: $spacing-6;
-
-    @include breakpoint(sm) {
-      margin-left: $spacing-5;
-    }
   }
 
   ul,
