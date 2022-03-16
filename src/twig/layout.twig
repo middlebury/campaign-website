@@ -23,11 +23,22 @@
           page_header,
           menu_items
         } %}
-      {% include 'paragraphs/image.twig' with { name: "basic_image", banner: true } %}
+      {% if header_image %}
+        {% include 'paragraphs/image.twig' with { name: header_image, banner: true } %}
+      {% endif %}
     {% endif %}
     {% block content %}{% endblock %}
   </main>
 
+  {% include 'partials/office-footer.twig' with {
+    office_name: 'Alumni and Families',
+    addr: '700 Exchange Street<br>Middlebury, VT 05753',
+    tel: {
+      text: '802-443-3000'
+    },
+    name: 'Stacie Marshall',
+    contact: 'staciem@middlebury.edu<br>(802) 443-5217'
+  } %}
   {% include 'partials/footer.twig' %}
   
   {% block layout_before_body_close %}{% endblock %}
