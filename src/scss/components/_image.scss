@@ -3,15 +3,6 @@
   justify-content: center;
 
   &--banner {
-    & .media > .media__caption {
-      padding-left: 1rem;
-      padding-right: 1rem;
-  
-      @include breakpoint(sm) {
-        padding: 0;
-      }
-    }
-  
     @include breakpoint(sm) {
       padding-left: 1rem;
       padding-right: 1rem;
@@ -26,21 +17,17 @@
 
 // margin is applied at .paragraphs level
 .image--right {
-  @include breakpoint(md) {
-    float: right;
-  }
+  float: right;
 
-  @media print {
-    float: none !important;
+  .media__caption {
+    padding:0;
   }
 }
 
 .image--left {
-  @include breakpoint(md) {
-    float: left;
-  }
+  float: left;
 
-  @media print {
-    float: none !important;
+  .media__caption {
+    padding:0;
   }
 }

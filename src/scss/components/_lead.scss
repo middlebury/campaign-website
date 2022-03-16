@@ -1,8 +1,40 @@
 .lead {
   font-family: $font-family-sans-primary;
-  font-weight: $font-weight-light;
-  font-size: $typescale-7;
-  line-height: 1.8;
-  margin-top: 0;
-  margin-bottom: $spacing-5;
+  font-weight: $font-weight-normal;
+  font-size: $typescale-8;
+  line-height: $line-height-5;
+
+  .typography & {
+    font-weight: $font-weight-light;
+    font-size: $typescale-7;
+    line-height: 1.8;
+    margin-top: 0;
+    margin-bottom: $spacing-5;
+  }
+
+  .paragraphs--wide & {
+    text-align: center;
+    margin-top: $spacing-4;
+    margin-bottom: $spacing-5;
+    font-size: $typescale-7;
+    letter-spacing: $letter-spacing;
+    max-width: 1440px;
+
+    @include breakpoint(md) {
+      margin-top: $spacing-5;
+      margin-bottom: $spacing-6;
+      font-size: rem(32);
+    }
+
+    @include breakpoint(lg) {
+      margin-top: $spacing-6;
+      margin-bottom: $spacing-6;
+      font-size: rem(38);
+    }
+
+    @include breakpoint(lg) {
+      @include make-col(10);
+      @include make-col-offset(1);
+    }
+  }
 }

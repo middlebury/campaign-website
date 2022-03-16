@@ -1,19 +1,39 @@
 .banner {
   position: relative; 
-  &__back {
 
+  > .container {
+    padding-left: 0;
+    padding-right: 0;
+
+    @include breakpoint(sm) {
+      padding-left: $spacing-3;
+      padding-right: $spacing-3;
+    }
+
+    @include breakpoint(lg) {
+      padding-left: $spacing-5;
+      padding-right: $spacing-5;
+    }
   }
 
   &__front {
     top: 0;
-    position: absolute;
     display: flex;
     align-items: center;
     height: 100%;
+    background: #0d395f;
+    justify-content: center;
+
+    @include breakpoint(sm) {
+      position: absolute;
+      background: none;
+      justify-content: left;
+    }
   }
 
   &__content {
     & h1 {
+      display: table-caption;
       font-size: $typescale-10;
       line-height: $line-height-2;
       background: $color-navy;
@@ -21,6 +41,11 @@
       font-weight: $font-weight-light;
       padding: $spacing-3;
       padding-right: rem(28);
+      text-align: center;
+
+      @include breakpoint(sm) {
+        text-align: left;
+      }
     }
   }
 }

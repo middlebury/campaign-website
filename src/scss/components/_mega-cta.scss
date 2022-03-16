@@ -2,8 +2,25 @@
   position: relative;
   margin-top: $spacing-6;
   color: $white;
+  height: 466px;
+
+  @include breakpoint(sm) {
+    height: initial;
+  }
 
   &__back{
+    height: 100%;
+    margin-left: -$spacing-3;
+    margin-right: -$spacing-3;
+
+    img {
+      object-fit: cover;
+      height: 100%;
+    }
+
+    @include breakpoint(sm) {
+      margin: 0;
+    }
   }
 
   &__front {
@@ -20,39 +37,66 @@
   &__content {
     & h2 {
       font-family: $font-family-sans-primary;
-      font-size: rem(38);
+      font-size: rem(32);
       font-weight: $font-weight-semibold;
       line-height: $line-height-5;
       text-align: center;
       letter-spacing: $letter-spacing;
       padding-bottom: $spacing-2;
+
+      // @include breakpoint(md) {
+      //   font-size: rem(32);
+      // }
+      @include breakpoint(lg) {
+        font-size: rem(38);
+      }
     }
 
     & p {
-      font-weight: $font-weight-medium;
-      font-size: $typescale-6;
+      font-weight: $font-weight-normal;
+      font-size: $typescale-5;
       line-height: $line-height-5;
       margin: 0;
+
+      @include breakpoint(lg) {
+        font-size: $typescale-6;
+      }
+
+      @include breakpoint(xl) {
+        font-size: $typescale-7;
+      }
     }
 
     & h3 {
       font-size: $typescale-4;
       font-weight: $font-weight-bold;
-      padding-top: $spacing-5;
+      padding-top: $spacing-4;
       line-height: $line-height-9;
+
+      @include breakpoint(lg) {
+        padding-top: $spacing-5;
+      }
+
+      &:last-of-type {
+        padding-top: $spacing-3;
+
+        @include breakpoint(lg) {
+          padding-top: $spacing-4;
+        }
+      }
     }
 
-    & p > a {
+    & a {
       line-height: $line-height-9;
       font-size: $typescale-3;
       font-weight: $font-weight-semibold;
-      padding-right: rem(12);
 
       &:not(:first-child) {
         padding-left: rem(12);
       }
 
       &:not(:last-child) {
+        padding-right: rem(12);
         border-right: 1px solid $white;
       }
 

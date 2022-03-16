@@ -4,13 +4,18 @@
    width: 100%;
    background: $white;
    border-bottom: 4px solid #0d394f;
-   padding-top: $spacing-5;
-   padding-bottom: $spacing-7;
+   padding-top: $spacing-4;
+   padding-bottom: $spacing-4;
    display: none;
   //  opacity: 0;
 
   @include breakpoint(lg) {
     display: block;
+  }
+
+  @include breakpoint(xl) {
+    padding-top: $spacing-7;
+    padding-bottom: $spacing-7;
   }
 }
 
@@ -37,6 +42,7 @@
     h3 {
       font-size: $typescale-3;
       font-weight: $font-weight-bold;
+      line-height: 1.2;
 
       a {
         text-decoration: none;
@@ -55,6 +61,7 @@
       font-size: $typescale-2;
       font-family: $font-family-sans-secondary;
       font-weight: $font-weight-medium;
+      line-height: 1.2;
       padding-bottom: $spacing-3;
       
       &:last-child {
@@ -83,5 +90,9 @@
   // margin-left: $spacing-5;
   padding-right: $spacing-5;
   padding-left: $spacing-5;
-  margin-bottom: $spacing-5;
+  margin-bottom: $spacing-3;
+
+  @include breakpoint(xl) {
+    margin-bottom: $spacing-5;
+  }
 }

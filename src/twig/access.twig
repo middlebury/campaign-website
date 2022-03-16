@@ -6,7 +6,9 @@
       
       <div class="paragraphs paragraphs--wide">
         {% block paragraphs %}
-          {% include 'paragraphs/banner.twig' %}
+          {% include 'paragraphs/banner.twig' with {
+            title: 'Academic Excellence'
+          } %}
           <hr>
           {% include 'paragraphs/text.twig' with {
             content: '<p>Middlebury is a private institution, but we’re also a public good. <br> And a public good should be accessible to all, regardless of financial means.</p>'

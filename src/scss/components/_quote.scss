@@ -1,12 +1,24 @@
 .quote {
-  font-size: $typescale-8;
+  font-size: $typescale-7;
   line-height: $line-height-5;
-  font-weight: $font-weight-light;
+  font-weight: $font-weight-normal;
+  letter-spacing: $letter-spacing;
   text-align: center;
+  margin: 0;
+
+  @include breakpoint(md) {
+    font-size: rem(32)
+  }
+
+  @include breakpoint(lg) {
+    font-size: rem(38);
+    @include make-col(10);
+    @include make-col-offset(1);
+  }
 }
 
 .quote__text {
-  margin:0;
+  // margin:0;
 
   .quote--marks & {
     quotes: '“' '”';

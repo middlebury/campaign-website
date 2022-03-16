@@ -1,12 +1,12 @@
 {% set id = random(1234) %}
 <div class="paragraph--full paragraph--video-group">
-  <div class="container px-0">
+  <div class="container px-lg-0">
     <div class="video-group">
       <h2 class="visually-hidden">Video Group</h2>
 
       <div class="row">
         {% for item in 0..1 %}
-          <div class="col-md-6">
+          <div class="col-md-6 pb-5 pb-md-0">
            {% include 'paragraphs/video.twig' with {
              id: loop.index,
              video_title: "This is the video title"

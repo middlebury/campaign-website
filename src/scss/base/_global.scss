@@ -37,11 +37,11 @@ figure {
 }
 
 hr {
- width: calc(100vw - 64px);
- margin: $spacing-5 0;
- margin-left: calc(50% - 50vw + 32px);
- border: 0;
- border-top: 1px solid $gray-light;
+  width: calc(100vw - 64px);
+  margin: $spacing-5 0;
+  margin-left: calc(50% - 50vw + 32px);
+  border: 0;
+  border-top: 1px solid $gray-light;
 }
 
 a {

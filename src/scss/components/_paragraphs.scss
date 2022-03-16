@@ -75,22 +75,50 @@
 
 .paragraph--tri-story {
   @extend %paragraph-space;
-  margin-top: $spacing-5;
+  margin-top: $spacing-6;
+  margin-bottom: $spacing-6;
+
+  @include breakpoint(lg) {
+    margin-top: $spacing-7;
+    margin-bottom: $spacing-7;
+  }
 }
 
 .paragraph--mega-cta {
   margin-top: $spacing-6;
   margin-bottom: $spacing-6;
+
+  @include breakpoint(lg) {
+    margin-top: $spacing-7;
+    margin-bottom: $spacing-7;
+  }
 }
 
-.paragraph--banner, .paragraph--video-group {
+.paragraph--video-group {
   margin-top: $spacing-3;
   margin-bottom: $spacing-6;
 
   @include breakpoint(lg) {
+    @include make-gutters;
+  }
+
+  @include breakpoint(xl) {
     margin-left: calc(-100% * 2 / 12);
     margin-right: calc(-100% * 2 / 12);
-    @include make-gutters;
+  }
+}
+
+.paragraph--banner {
+  @extend %paragraph-full-width;
+
+  @include breakpoint(md) {
+    margin-top: $spacing-5;
+    margin-bottom: $spacing-6;
+  }
+
+  @include breakpoint(lg) {
+    margin-top: $spacing-7;
+    margin-bottom: $spacing-7;
   }
 }
 
@@ -99,18 +127,59 @@
 }
 
 .paragraph--video {
-  margin-top: $spacing-6;
-  margin-bottom: $spacing-5;
+  margin-top: $spacing-5;
+  margin-bottom: $spacing-6;
+
+  @include breakpoint(md) {
+    margin-top: $spacing-6;
+  }
+
+  @include breakpoint(lg) {
+    margin-bottom: $spacing-7;
+  }
+
+  @include breakpoint(xl) {
+    margin-top: $spacing-5;
+  }
 }
 
 .paragraph--video-group {
-  margin-top: $spacing-7;
-  margin-bottom: $spacing-7;
+  margin-top: $spacing-6;
+  margin-bottom: $spacing-6;
+
+  .paragraph--video {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  // @include breakpoint(md) {
+  //   margin-top: $spacing-6;
+  //   margin-bottom: $spacing-6;
+  // }
+
+  @include breakpoint(lg) {
+    margin-top: $spacing-7;
+    margin-bottom: $spacing-7;
+  }
+
+  // @include breakpoint(xl) {
+
+  // }
 }
 
 .paragraph--quote {
-  margin-top: $spacing-6;
-  margin-bottom: $spacing-6;
+  @extend %paragraph-full-width;
+  margin-top: $spacing-4;
+  margin-bottom: $spacing-7;
+
+  @include breakpoint(md) {
+    margin-bottom: $spacing-6;
+  }
+
+  @include breakpoint(lg) {
+    margin-top: $spacing-5;
+    margin-bottom: $spacing-7;
+  }
 }
 
 .paragraph--image {
@@ -129,6 +198,21 @@
     margin-bottom: $spacing-4;
     margin-left: $spacing-4;
   }
+
+  &.image--banner {
+    margin-top: $spacing-5;
+    margin-bottom: $spacing-4;
+
+    @include breakpoint(md) {
+      margin-top: $spacing-6;
+      margin-bottom: $spacing-5;
+    }
+
+    @include breakpoint(lg) {
+      margin-top: $spacing-7;
+      margin-bottom: $spacing-7;
+    }
+  }
 }
 
 .paragraph--image:not(.image--left):not(.image--right) {
@@ -141,6 +225,10 @@
     // margin-right: calc(-100% * 2 / 12);
     @include make-gutters;
   }
+}
+
+.paragraph--lead {
+  @extend %paragraph-full-width;
 }
 
 .paragraph--full {
