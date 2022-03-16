@@ -4,9 +4,16 @@
 .media__caption {
   font-size: $typescale-2;
   padding-top: $spacing-2;
-  font-weight: $font-weight-light;
+  font-weight: $font-weight-normal;
   color: $gray-dark;
-  line-height: $line-height-6;
+  line-height: 1.8;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  @include breakpoint(sm) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 
   a {
     @include link-border;
