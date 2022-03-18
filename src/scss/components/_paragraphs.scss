@@ -67,6 +67,8 @@
 
 .paragraph--text {
   @extend %paragraph-full-width;
+  margin-top: $spacing-5;
+  margin-bottom: $spacing-5;
 }
 
 .paragraph--tri-story {
@@ -111,9 +113,10 @@
 .paragraph--banner {
   @extend %paragraph-full-width;
 
+  margin-bottom: $spacing-6;
+
   @include breakpoint(md) {
     margin-top: $spacing-5;
-    margin-bottom: $spacing-6;
   }
 
   @include breakpoint(lg) {
