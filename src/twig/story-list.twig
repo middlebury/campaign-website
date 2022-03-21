@@ -1,0 +1,53 @@
+{% extends 'layout.twig' %}
+
+{% set menu_items = {
+    label: 'Access',
+    items: [
+      { 
+        text: 'Commitment to Access', 
+        href: '#',
+        items: [
+          { 
+            text: 'Detail Page',
+            href: '#'
+          }
+        ]
+      },
+      { text: 'Priorities and Goals | Your Impact', href: '#' },
+      { text: 'Giving Opportunities', href: '#' },
+      { text: 'Philanthropy in Action', href: '#' },
+      { text: 'Statistics/Trends', href: '#' }
+    ]
+  }
+%}
+
+{% set page_header = {
+  title: 'Philanthropy in Action'
+} %}
+
+{% block content %}
+  {% embed 'partials/sidebar-layout.twig' %}
+    {% block nav %}
+      {% include 'partials/page-nav.twig' with menu_items %}
+    {% endblock %}
+    {% block page_content %}
+      <div class="container px-0 col-sm-10 col-lg">
+          {% block paragraphs %}
+            {% include 'partials/story-list-page.twig' %}
+        {% endblock %}
+      </div>
+    {% endblock %}
+  {% endembed %}
+{% endblock %}
+
+{% block layout_before_body_close %}
+  {% embed 'partials/drawer.twig'
+    with {
+      title: 'Navigation'
+    }
+  %}
+    {% block content %}
+      {% include 'partials/drawer-nav.twig' %}
+    {% endblock %}
+  {% endembed %}
+{% endblock %}

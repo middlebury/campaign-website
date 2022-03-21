@@ -1,10 +1,25 @@
 image_styles:
   # paragraphs
+  featured: # basic content, event detail, story detail
+    title: Featured image (basic content, story page, event page)
+    ratio: '16:9'
+    srcset:
+      - 400x225
+      - 640x360
+      - 832x468
+  story_teaser:
+    title: News Story teaser
+    ratio: '16:9'
+    srcset:
+      - 224x126
+      - 288x162
+      - 296x166
+    sizes: '(max-width: 512px) 288px, (max-width: 768px) 224px, 296px'
   video:
     title: Video component
     ratio: '16:9'
     srcset:
-      - 400x225
+      - 400x225 
       - 640x360
       - 896x504
   tri_story_item:
@@ -29,14 +44,14 @@ image_styles:
       - 400x225
       - 640x360
       - 832x468
-      - 1136x639
+      - 1376x774
   float_image:
     title: Floating Image
-    ratio: '3:4'
     srcset:
-      - 90x120
-      - 144x192
-      - 288x384
+      - 128x170
+      - 239x318
+      - 296x394
+    sizes: '(max-width: 512px) 128px, (max-width: 768px) 239px, 296px'
   basic_image:
     title: Image component  
     ratio: '16:9'

@@ -3,36 +3,147 @@
 
   .typography & {
     text-align: initial;
-  }
 
-  & h2,
-  & .h2 {
-    @include h1;
-    font-weight: $font-weight-normal;
-  }
-
-  & p {
-    @include h2;
-    font-weight: $font-weight-light;
+    &--container {
+      > :first-child {
+        margin-top: 0;
+      }
+    }
   }
 
   & a {
     font-weight: $font-weight-light;
     font-size: $typescale-4;
-    line-height: $line-height-6;
+    line-height: 2;
     // text-transform: capitalize;
-  }
-
-  .paragraphs--wide & > &--container {
-    @include make-container;
-    @media print {
-      padding-left: 0;
-      padding-right: 0;
-    }
+    margin-top: rem(20);
+    margin-bottom: $spacing-4;
 
     @include breakpoint(md) {
+      margin-top: $spacing-3;
+    }
+
+    @include breakpoint(lg) {
+      margin-bottom: $spacing-5;
+    }
+  }
+
+  .paragraphs--wide &--container {
+    // padding-right: 1rem;
+    // padding-left: 1rem;
+
+    @include breakpoint(md) {
+      padding: 0;
       @include make-col(10);
       @include make-col-offset(1);
+    }
+
+    & h2,
+    & .h2 {
+      font-size: $typescale-7;
+      font-weight: $font-weight-normal;
+      line-height: $line-height-5;
+      margin-top: $spacing-5;
+      margin-bottom: $spacing-3;
+
+      @include breakpoint(md) {
+        font-size: rem(32);
+        margin-top: $spacing-6;
+        margin-bottom: $spacing-5;
+      }
+
+      @include breakpoint(lg) {
+        font-size: rem(38);
+        margin-top: $spacing-7;
+        margin-bottom: $spacing-5;
+      }
+    }
+
+    & h3,
+    & .h3 {
+      font-size: rem(26);
+      line-height: $line-height-5;
+      margin-top: $spacing-4;
+      margin-bottom: $spacing-3;
+
+      @include breakpoint(md) {
+        font-size: $typescale-7;
+        margin-bottom: $spacing-4;
+      }
+
+      @include breakpoint(lg) {
+        font-size: rem(32);
+        margin-top: $spacing-5;
+      }
+    }
+
+    & h4,
+    & .h4 {
+      font-size: rem(23);
+      line-height: $line-height-4;
+      font-weight: $font-weight-normal;
+      margin-top: $spacing-4;
+      margin-bottom: $spacing-2;
+      text-transform: uppercase;
+
+      @include breakpoint(md) {
+        font-size: rem(27);
+        font-weight: $font-weight-light;
+      }
+
+      @include breakpoint(lg) {
+        font-size: $typescale-7;
+        line-height: 1.8;
+      }
+    }
+
+    & h5,
+    & .h5 {
+      font-size: rem(21);
+      line-height: $line-height-5;
+      margin-top: $spacing-2;
+      margin-bottom: 0;
+
+      @include breakpoint(md) {
+        font-size: rem(25);
+      }
+
+      @include breakpoint(lg) {
+        line-height: 1.8;
+        font-size: rem(26);
+      }
+    }
+
+    & h6,
+    & .h6 {
+      font-size: $typescale-4;
+      line-height: $line-height-5;
+      margin-top: 0;
+      margin-bottom: 0; 
+
+      @include breakpoint(md) {
+        font-size: rem(23);
+      }
+
+      @include breakpoint(lg) {
+        font-size: $typescale-6;
+        line-height: 1.8;
+      }
+    }
+
+    & p {
+      font-size: $typescale-6;
+      line-height: 1.8;
+      font-weight: $font-weight-light;
+      margin: 0;
+
+      @include breakpoint(md) {
+        font-size: $typescale-7;
+      }
+    }
+
+    & a {
+      display: block;
     }
   }
 }

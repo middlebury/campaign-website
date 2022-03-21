@@ -11,21 +11,34 @@
       text-align: center;
       padding-top: $spacing-2;
 
+      @include breakpoint(lg) {
+        padding-top: $spacing-3;
+      }
+
       &--heading {
-        font-size: $typescale-7;
+        font-size: $typescale-5;
         line-height: $line-height-7;
         font-weight: $font-weight-bold;
+
+        @include breakpoint(lg) {
+          font-size: $typescale-7;
+        }
       }
 
       &--text {
-        font-size: $typescale-4;
-        line-height: $line-height-7;
-        margin-top: $spacing-2;
-        margin-bottom: $spacing-3;
+        font-size: $typescale-2;
+        line-height: $line-height-9;
+        margin-top: 0;
+        margin-bottom: $spacing-2;
+
+        @include breakpoint(lg) {
+          margin-top: $spacing-2;
+          font-size: $typescale-3;
+        }
       }
 
       & a {
-        line-height: $line-height-8;
+        line-height: $line-height-9;
       }
     }
 

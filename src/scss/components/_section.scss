@@ -1,23 +1,36 @@
 .section {
-  margin-bottom: $spacing-6;
-
-  &--basic {
-    margin-bottom: $spacing-7;
-  }
-
   &__header {
-    margin-bottom: $spacing-6;
+    margin-bottom: $spacing-5;
     text-align: center;
+
+    @include breakpoint(lg) {
+      margin-bottom: $spacing-6;
+    }
   }
 
   &__title {
+    font-size: $typescale-7;
+    line-height: $line-height-5;
     margin-bottom: $spacing-2;
+
+    @include breakpoint(md) {
+      font-size: rem(32);
+    }
+
+    @include breakpoint(lg) {
+      font-size: rem(38);
+    }
   }
 
   &__blurb {
-    font-size: $typescale-7;
-    line-height: $line-height-6;
+    font-size: $typescale-6;
+    line-height: $line-height-5;
     font-weight: $font-weight-light;
     margin: 0;
+
+    @include breakpoint(md) {
+      font-size: $typescale-7;
+      line-height: 1.8; 
+    }
   }
 }

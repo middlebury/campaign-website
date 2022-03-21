@@ -14,7 +14,7 @@
             <h3 class="video__title" id="midd-video-label-{{id}}">{{video_title}}</h3>
           {% endif %}
           <span class="button button--primary video__button">
-            <span class="video__button--text-before">52 seconds</span><span class="video__button--text-after">Play
+            {% if duration %}<span class="video__button--text-before">{{duration}}</span>{% endif %}<span class="{{duration ? 'pl-3' : ''}} video__button--text-after">Play
                 <span class="ml-2">
                     {% include 'partials/icon.twig' with {
                       name: 'play',

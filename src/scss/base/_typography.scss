@@ -1,179 +1,198 @@
-.typography .text {
-  > :last-child {
-    margin-bottom: 0;
+.typography {
+  // :last-child {
+  //   margin-bottom: 0;
+  // }
+
+  .container {
+    padding: 0;
   }
 
-  p {
-    font-family: $font-family-sans-primary;
-    font-size: $paragraph-font-size;
-    font-weight: 400;
-    margin: 0;
-    margin-bottom: $spacing-5;
-    line-height: $line-height-9;
-  } 
+  .text {
+    p {
+      font-family: $font-family-sans-primary;
+      font-size: $paragraph-font-size;
+      font-weight: 400;
+      margin: 0;
+      margin-bottom: $spacing-5;
+      line-height: $line-height-9;
+    } 
 
-  a {
-    font-weight: $font-weight-medium;
-    @include link-border;
-  }
-
-  a:not([href*='middlebury.edu']):not([href^='#']):not([href^='/']):not([href^='mailto:']):not([href*='drive.google.com']):not([href*='docs.google.com']):not([href*='.pdf']):not([href*='middleburycollege-my.sharepoint.com']):not([name]):not([role*='button']) {
-    @include link-external;
-  }
-
-  a[href^='mailto:'],
-  a[href*='drive.google.com'],
-  a[href*='docs.google.com'],
-  a[href*='.pdf'],
-  a[href*='middleburycollege-my.sharepoint.com'] {
-    &:after {
-      font-size: rem(10);
-      display: inline-block;
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-      padding: $spacing-1;
-      line-height: 1;
-      background: $color-navy;
-      color: $white;
-      margin-left: $spacing-1;
-      transition: 0.2s;
+    a {
+      font-weight: $font-weight-medium;
+      @include link-border;
     }
 
-    &:hover,
-    &:focus {
+    a:not([href*='middlebury.edu']):not([href^='#']):not([href^='/']):not([href^='mailto:']):not([href*='drive.google.com']):not([href*='docs.google.com']):not([href*='.pdf']):not([href*='middleburycollege-my.sharepoint.com']):not([name]):not([role*='button']) {
+      @include link-external;
+    }
+
+    a[href^='mailto:'],
+    a[href*='drive.google.com'],
+    a[href*='docs.google.com'],
+    a[href*='.pdf'],
+    a[href*='middleburycollege-my.sharepoint.com'] {
       &:after {
-        transform: translateY(-4px);
+        font-size: rem(10);
+        display: inline-block;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        padding: $spacing-1;
+        line-height: 1;
+        background: $color-navy;
+        color: $white;
+        margin-left: $spacing-1;
+        transition: 0.2s;
+      }
+
+      &:hover,
+      &:focus {
+        &:after {
+          transform: translateY(-4px);
+        }
       }
     }
-  }
 
-  a[href^='mailto:'] {
-    &:after {
-      content: 'Email';
+    a[href^='mailto:'] {
+      &:after {
+        content: 'Email';
+      }
     }
-  }
 
-  a[href*='.pdf'] {
-    &:after {
-      content: 'PDF';
+    a[href*='.pdf'] {
+      &:after {
+        content: 'PDF';
+      }
     }
-  }
 
-  a[href*='drive.google.com'],
-  a[href*='docs.google.com'] {
-    &:after {
-      content: 'Google Drive';
+    a[href*='drive.google.com'],
+    a[href*='docs.google.com'] {
+      &:after {
+        content: 'Google Drive';
+      }
     }
-  }
 
-  a[href*='middleburycollege-my.sharepoint.com'] {
-    &:after {
-      content: 'Office 365';
+    a[href*='middleburycollege-my.sharepoint.com'] {
+      &:after {
+        content: 'Office 365';
+      }
     }
-  }
 
-  // reset styles for jump links
-  a[id][name] {
-    color: currentColor;
-    text-decoration: none;
-    border: 0;
-  }
-
-  ul,
-  ol {
-    margin-bottom: $paragraph-margin-bottom;
-    padding-left: $spacing-5;
-    padding-right: $spacing-5;
-    font-size: $paragraph-font-size;
+    // reset styles for jump links
+    a[id][name] {
+      color: currentColor;
+      text-decoration: none;
+      border: 0;
+    }
 
     ul,
     ol {
-      margin-top: $spacing-3;
+      margin-bottom: $paragraph-margin-bottom;
+      padding-left: $spacing-5;
+      padding-right: $spacing-5;
+      font-size: $paragraph-font-size;
+
+      ul,
+      ol {
+        margin-top: $spacing-3;
+        margin-bottom: $spacing-3;
+        padding-left: $spacing-4;
+      }
+    }
+
+    ul {
+      > li {
+        position: relative;
+
+        &:before {
+          content: '\2022';
+          position: absolute;
+          right: calc(100% + 8px);
+          top: 2px;
+          font-size: 14px;
+          line-height: 2;
+        }
+      }
+    }
+
+    ol {
+      list-style-type: none;
+      counter-reset: ol;
+
+      > li {
+        counter-increment: ol;
+        position: relative;
+
+        &:before {
+          content: counter(ol) '.';
+          position: absolute;
+          right: calc(100% + #{$spacing-2});
+          top: 0.25rem;
+          font-size: $typescale-2;
+          line-height: $line-height-7;
+        }
+      }
+    }
+
+    li {
+      &:not(:last-of-type) {
+        margin-bottom: $spacing-2;
+      }
+
+      p:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      line-height: $line-height-4;
+      font-weight: $font-weight-semibold;
+
+      @include breakpoint(md) {
+        line-height: $line-height-5;
+      }
+    }
+
+    h1 {
+      font-size: $typescale-10;
+      font-weight: $font-weight-light;
+      line-height: $line-height-2;
+      margin-top: $spacing-7;
+      margin-bottom: $spacing-7;
+      color: $color-navy;
+    }
+
+    h2 {
+      font-size: $typescale-7;
+      margin-top: $spacing-5;
+      margin-bottom: rem(18);
+    }
+
+    h3 {
+      font-size: rem(21);
+      margin-top: $spacing-4;
       margin-bottom: $spacing-3;
-      padding-left: $spacing-4;
     }
-  }
 
-  ul {
-    > li {
-      position: relative;
-
-      &:before {
-        content: '\2022';
-        position: absolute;
-        right: calc(100% + 8px);
-        top: 6px;
-        font-size: 10px;
-      }
-    }
-  }
-
-  ol {
-    list-style-type: none;
-    counter-reset: ol;
-
-    > li {
-      counter-increment: ol;
-      position: relative;
-
-      &:before {
-        content: counter(ol) '.';
-        position: absolute;
-        right: calc(100% + #{$spacing-2});
-        top: 0.25rem;
-        font-size: $typescale-2;
-        line-height: $line-height-7;
-      }
-    }
-  }
-
-  li {
-    &:not(:last-of-type) {
+    h4 {
+      font-size: $typescale-4;
+      margin-top: $spacing-3;
       margin-bottom: $spacing-2;
     }
 
-    p:last-of-type {
+    h5 {
+      font-size: $typescale-3;
+      margin-top: $spacing-2;
+      margin-bottom: $spacing-1;
+    }
+
+    h6 {
+      font-size: $typescale-2;
+      margin-top: $spacing-1;
       margin-bottom: 0;
     }
-  }
-
-  h1 {
-    font-size: $typescale-10;
-    font-weight: $font-weight-light;
-    line-height: $line-height-2;
-    margin-top: $spacing-7;
-    margin-bottom: $spacing-7;
-    color: $color-navy;
-  }
-
-  h2 {
-    @include h2;
-    font-weight: $font-weight-semibold;
-    margin-top: $spacing-5;
-    margin-bottom: $spacing-3;
-  }
-
-  h3 {
-    margin-top: $spacing-5;
-    margin-bottom: $spacing-2;
-    font-weight: $font-weight-semibold;
-  }
-
-  h4 {
-    margin-top: $spacing-5;
-    margin-bottom: $spacing-1;
-    font-weight: $font-weight-semibold;
-  }
-
-  h5 {
-    margin-top: $spacing-5;
-    margin-bottom: $spacing-1;
-    font-weight: $font-weight-semibold;
-  }
-
-  h6 {
-    margin-top: $spacing-5;
-    margin-bottom: $spacing-1;
-    font-weight: $font-weight-semibold;
   }
 }

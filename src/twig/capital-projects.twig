@@ -1,0 +1,44 @@
+{% extends 'layout.twig' %}
+
+{% block content %}
+  <div class="container">
+    <div class="row">
+      
+      <div class="paragraphs paragraphs--wide">
+        {% block paragraphs %}
+          {% include 'paragraphs/banner.twig' with {
+            title: 'Capital Projects'
+          } %}
+          {% include 'paragraphs/text.twig' with {
+            content: '<h2>Our Commitment to a Vibrant Campus Environment</h2>
+<p>We create campus environments to support our academic mission and to build community for our students, faculty, and staff. Campuses must evolve to sustain and advance their work as each generation’s needs evolve. The master plans we create and buildings we construct today will empower the current generation—and those that follow.</p>
+<h3><strong>At the College</strong></h3>
+<h4>First-Year Residential Complex</h4>
+<p>To create a new residence to replace Battell Hall—a living-and-learning environment for our first-year students. The complex will promote community building, a sense of belonging, and further Middlebury’s goals for inclusion and understanding.</p>
+<h4>Student Center</h4>
+<p>To provide students with a central hub, a vibrant crossroads for intellectual, cultural, and recreational connection. The center will expand opportunities for social interactivity to foster effective relationships and a thriving community.</p>
+<h4>Art Museum</h4>
+<p>To enable students to experience global cultures, histories, and heritages firsthand in a dedicated, leading-edge space. The new museum will help integrate art into the entire liberal arts and sciences curriculum in “the largest classroom on campus.”</p>
+<hr>
+<h3>At the Institute</h3>
+<h4><strong>Master Plan</strong></h4>
+<p>To give the MIIS community a stronger sense of place on campus, greener and more pedestrian-friendly. The long-range, phased master plan will bring greater opportunity for faculty and student interaction inside and outside the classroom.</p>
+'
+          }%}
+        {% endblock %}
+      </div>
+      
+    </div>
+  </div>
+{% endblock %}
+{% block layout_before_body_close %}
+  {% embed 'partials/drawer.twig'
+    with {
+      title: 'Navigation'
+    }
+  %}
+    {% block content %}
+      {% include 'partials/drawer-nav.twig' %}
+    {% endblock %}
+  {% endembed %}
+{% endblock %}

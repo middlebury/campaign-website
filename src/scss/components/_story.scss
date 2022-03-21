@@ -1,0 +1,23 @@
+.story {
+}
+
+.story__title {
+    font-weight: $font-weight-normal;
+    font-size: $typescale-7;
+    line-height: 1.25;
+
+    a {
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+}
+
+.story__blurb {
+  font-weight: $font-weight-normal;
+  font-size: $typescale-3;
+  line-height: $line-height-9;
+  margin: 0;
+}
