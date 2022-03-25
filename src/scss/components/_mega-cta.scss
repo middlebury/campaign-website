@@ -52,17 +52,18 @@
     }
 
     & p {
-      font-weight: $font-weight-normal;
-      font-size: $typescale-5;
-      line-height: $line-height-5;
+      font-size: $typescale-3;
+      line-height: $line-height-9;
       margin: 0;
 
-      @include breakpoint(lg) {
-        font-size: $typescale-6;
-      }
+      &:nth-child(2), &:nth-child(3){
+        font-weight: $font-weight-normal;
+        font-size: $typescale-5;
+        line-height: $line-height-5;
 
-      @include breakpoint(xl) {
-        font-size: $typescale-7;
+        @include breakpoint(lg) {
+          font-size: $typescale-6;
+        }
       }
     }
 

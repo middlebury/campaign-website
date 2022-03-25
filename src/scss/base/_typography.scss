@@ -1,8 +1,10 @@
 .typography {
-  // :last-child {
-  //   margin-bottom: 0;
-  // }
+  > :last-child {
+    margin-bottom: 0;
+  }
 
+  margin-bottom: $spacing-7;
+  
   .container {
     padding: 0;
   }
