@@ -21,13 +21,15 @@
   // margin:0;
 
   .quote--marks & {
-    quotes: '“' '”';
+    quotes: '\201C' '\201D';
     position: relative;
 
     &:before {
       content: open-quote;
       top: 0;
       right: 100%;
+      left: rem(18);
+      position: absolute;
     }
 
     &:after {
@@ -42,7 +44,7 @@
   line-height: $line-height-6;
   margin: 0;
   margin-left: $spacing-3;
-  padding-left: $spacing-3;
+  padding-left: $spacing-5;
   color: $color-navy-light;
   border-left: 0.25px solid $color-navy-light;
   margin-top: $spacing-6;
