@@ -59,6 +59,7 @@ const deploy = gulp.series(replaceImagePaths, deployDist);
 
 module.exports = {
   ...cmds,
+  replaceImagePaths,
   deploy
 };
 
