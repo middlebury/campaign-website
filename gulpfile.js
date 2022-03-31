@@ -36,10 +36,10 @@ const options = {
 const cmds = createConfig(options);
 
 const replaceImagePaths = () => {
-  const imagesDir = args.imagesDir || '/images/';
+  const imagesDir = args.imagesDir || '/img/';
   return gulp
     .src('./dist/css/*.css')
-    .pipe(replace('/images/', imagesDir))
+    .pipe(replace('/img/', imagesDir))
     .pipe(gulp.dest('./dist/css'));
 };
 
@@ -49,7 +49,7 @@ const deployDist = () => {
   }
 
   return gulp
-    .src(['./dist/css/main.css', './dist/js/bundle.js', './dist/images/*'], {
+    .src(['./dist/css/main.css', './dist/js/bundle.js', './dist/img/*'], {
       base: './dist'
     })
     .pipe(gulp.dest(THEME_DIR));
