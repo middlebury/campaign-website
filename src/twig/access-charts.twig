@@ -1,0 +1,69 @@
+{% extends 'layout.twig' %}
+
+{% set menu_items = {
+    label: 'Access',
+    items: [
+      { 
+        text: 'Commitment to Access', 
+        href: '#',
+        items: [
+          { 
+            text: 'Detail Page',
+            href: '#'
+          }
+        ]
+      },
+      { text: 'Priorities and Goals | Your Impact', href: '#', active: true },
+      { text: 'Giving Opportunities', href: '#' },
+      { text: 'Philanthropy in Action', href: '#' },
+      { text: 'Statistics/Trends', href: '#' }
+    ]
+  }
+%}
+
+{% set page_header = {
+  title: 'Commitment to Access'
+} %}
+
+{% set header_image = 'basic_image' %}
+
+{% block content %}
+  {% embed 'partials/sidebar-layout.twig' %}
+    {% block nav %}
+      {% include 'partials/page-nav.twig' with menu_items %}
+    {% endblock %}
+    {% block page_content %}
+      <div class="container px-0 col-sm-10 col-lg">
+          {% block paragraphs %}
+            <div class="typography">
+
+              {% include 'paragraphs/chart-group.twig' with {
+                title: 'Internships',
+                items: [
+                  { type: 'stats', number: 100, suffix: '%', label: 'need-based aid', },
+                  { type: 'stats', number: 77420, prefix: '$', label: 'max-awarded in grants' },
+                  { type: 'stats', number: 57000, prefix: '$', label: 'average grant', },
+                  { type: 'stats', number: 100, suffix: '%', label: 'demonstrated need met', },
+                  { type: 'stats', number: 51, suffix: '%', label: 'students receiving aid', },
+                ]
+              } %}
+
+          </div>
+          <script src="/js/Chart.min.js"></script>
+        {% endblock %}
+      </div>
+    {% endblock %}
+  {% endembed %}
+{% endblock %}
+
+{% block layout_before_body_close %}
+  {% embed 'partials/drawer.twig'
+    with {
+      title: 'Navigation'
+    }
+  %}
+    {% block content %}
+      {% include 'partials/drawer-nav.twig' %}
+    {% endblock %}
+  {% endembed %}
+{% endblock %}
