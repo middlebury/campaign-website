@@ -9,6 +9,7 @@
 }
 
 .chart-group__list {
+  justify-content: center;
   @include make-row;
 }
 
