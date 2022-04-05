@@ -1,0 +1,91 @@
+{% extends 'layout.twig' %}
+
+{% set menu_items = {
+    label: 'Access',
+    items: [
+      { text: 'Our Commitment to Access', href: '#', active: true },
+      { text: 'Priorities and Goals, Access', href: '#' },
+      { text: 'Giving Opportunities, Access', href: '#' }
+    ]
+  }
+%}
+
+{% set page_header = {
+  title: 'Commitment to Access'
+} %}
+
+{% block content %}
+  {% embed 'partials/sidebar-layout.twig' %}
+    {% block nav %}
+      {% include 'partials/page-nav.twig' with menu_items %}
+    {% endblock %}
+    {% block page_content %}
+      <div class="container px-0 col-sm-10 col-lg">
+          {% block paragraphs %}
+            <div class="typography">
+
+              {% include 'paragraphs/lead.twig' with { 
+                content: 'Through our commitment to access, you’ll keep Middlebury affordable to all top students, enriching our community by reflecting today’s and tomorrow’s world. ' 
+              } %}
+
+              {% include 'paragraphs/text.twig' with {
+                content: '
+                  <h2>Increasing Access at the College</h2>
+                  
+                  <p>We admit the most qualified students among our applicants and meet every student’s full demonstrated financial need. That goes beyond support for the cost of attendance into support for the cost of experience.</p>
+                  
+                  <p>Being a Middlebury student means receiving an extraordinary education in and out of the classroom. It means equal opportunities to participate in clubs and sports, internships and immersion abroad, spiritual and religious life, and cultural and artistic expression.</p>
+                  
+                  <p>We must keep a Middlebury education affordable. This is our duty to our current and future students and their families and to mission-driven Middlebury itself.</p>'
+              }%}
+
+              {% include 'paragraphs/chart-group.twig' with {
+                title: 'Middlebury meets the full demonstrated financial need of all admitted students.',
+                items: [
+                  { type: 'stats', number: 100, suffix: '%', label: 'need-based aid', },
+                  { type: 'stats', number: 77420, prefix: '$', label: 'max-awarded in grants' },
+                  { type: 'stats', number: 57000, prefix: '$', label: 'average grant', },
+                  { type: 'stats', number: 100, suffix: '%', label: 'demonstrated need met', },
+                  { type: 'stats', number: 51, suffix: '%', label: 'students receiving aid', },
+                ]
+              } %}
+
+              {% include 'paragraphs/text.twig' with {
+                content: '
+                  <h2>Increasing Opportunities at the Graduate Programs</h2>
+                  
+                  <p>Our students at the Middlebury Language Schools, Bread Loaf School of English, and Middlebury Institute of International Studies are people who lead, teach, and expand our cultural and linguistic understanding. People who open minds, document wrongs, build peace, create opportunities and expand our understanding of each other and our planet.</p>
+                  
+                  <p>Increasing funding for graduate scholarships means more talented, inspiring applicants will have the opportunity to explore, learn, and effect positive change.</p>'
+              }%}
+
+              {% include 'paragraphs/chart-group.twig' with {
+                items: [
+                  {
+                    type: 'pie',
+                    title: 'Standard Cost of Attendance 2021,2022',
+                    labels: ['Tuition', 'Room & Board', 'Books & Supplies', 'Travel', 'Personal Expenses', 'Student Activities Fee'],
+                    datasets: [ { data: [59330,17050,1000,1000,1000,440] }  ]
+                  }
+                ]
+              } %}
+
+          </div>
+          <script src="/js/Chart.min.js"></script>
+        {% endblock %}
+      </div>
+    {% endblock %}
+  {% endembed %}
+{% endblock %}
+
+{% block layout_before_body_close %}
+  {% embed 'partials/drawer.twig'
+    with {
+      title: 'Navigation'
+    }
+  %}
+    {% block content %}
+      {% include 'partials/drawer-nav.twig' %}
+    {% endblock %}
+  {% endembed %}
+{% endblock %}
