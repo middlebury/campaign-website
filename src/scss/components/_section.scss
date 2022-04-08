@@ -12,6 +12,7 @@
     font-size: $typescale-7;
     line-height: $line-height-5;
     margin-bottom: $spacing-2;
+    font-weight: $font-weight-normal;
 
     @include breakpoint(md) {
       font-size: rem(32);
