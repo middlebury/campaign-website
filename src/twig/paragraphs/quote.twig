@@ -1,6 +1,11 @@
 <figure class="{{ marks ? "quote--marks" : "" }} paragraph--quote">
   <div class="container">
-    <blockquote class="quote quote__text">{{quote_text}}</blockquote>
+    <blockquote class="quote quote__text">
+      {{quote_text}}
+      {% if quote_attribution %}
+        <p class="quote__attribution">{{quote_attribution}}</p>
+      {% endif %}
+    </blockquote>
     {% if quote_cite %}
       <figcaption class="quote__cite">{{quote_cite}}</figcaption>
     {% endif %}
