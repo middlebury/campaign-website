@@ -1,12 +1,12 @@
 <div class="paragraph--chart text">
-  {% if title is not empty or text is not empty %}
+  {% if title or text %}
     <div class="section__header">
       {% if title %}
         <h2 class="section__title">{{title}}</h2>
       {% endif %}
 
-      {% if text is not empty %}
-        <p class="section__blurb">{{text|default("Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos dolorum, illum nesciunt quod quidem neque voluptatibus provident odit ut, ipsum doloremque minus repellat libero est corrupti omnis earum quae officia?")}}</p>
+      {% if text %}
+        <p class="section__blurb">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos dolorum, illum nesciunt quod quidem neque voluptatibus provident odit ut, ipsum doloremque minus repellat libero est corrupti omnis earum quae officia?</p>
       {% endif %}
     </div>
   {% endif %}
