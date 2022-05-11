@@ -38,6 +38,16 @@
   }
 }
 
+.quote__cite {
+  font-weight: $font-weight-normal;
+  font-size: $typescale-2;
+  line-height: 1.8;
+  color: $gray-dark;
+  margin: 0;
+  margin-top: $spacing-2;
+  letter-spacing: initial;
+}
+
 .typography blockquote {
   font-size: $typescale-7;
   font-weight: $font-weight-light;
@@ -48,7 +58,7 @@
   color: $color-navy-light;
   border-left: 0.25px solid $color-navy-light;
   margin-top: $spacing-6;
-  margin-bottom: $spacing-6;
+  margin-bottom: $spacing-5;
   text-align: initial;
 
   @include breakpoint(sm) {

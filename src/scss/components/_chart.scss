@@ -97,6 +97,10 @@
 .chart-legend__item {
   font-size: $typescale-2;
   margin-bottom: $spacing-1;
+
+  .typography .text ul > &::before {
+    display: none;
+  }
 }
 
 .chart-legend__icon {
