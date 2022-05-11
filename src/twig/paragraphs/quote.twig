@@ -2,12 +2,9 @@
   <div class="container">
     <blockquote class="quote quote__text">
       {{quote_text}}
-      {% if quote_attribution %}
-        <p class="quote__attribution">{{quote_attribution}}</p>
+      {% if quote_cite %}
+        <figcaption class="quote__cite">{{quote_cite}}</figcaption>
       {% endif %}
     </blockquote>
-    {% if quote_cite %}
-      <figcaption class="quote__cite">{{quote_cite}}</figcaption>
-    {% endif %}
   </div>
 </figure>
