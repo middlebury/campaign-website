@@ -1,7 +1,6 @@
 .section {
   &__header {
     margin-bottom: $spacing-5;
-    text-align: center;
 
     @include breakpoint(lg) {
       margin-bottom: $spacing-6;
@@ -33,5 +32,9 @@
       font-size: $typescale-7;
       line-height: 1.8; 
     }
+  }
+
+  .paragraphs--wide & {
+    text-align: center;
   }
 }
