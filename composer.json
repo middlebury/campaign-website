@@ -1,0 +1,8 @@
+
+{
+    "name": "middlebury/campaign-website",
+    "description": "Middlebury's campaign website theme assets.",
+    "homepage": "https://github.com/middlebury/campaign-website",
+    "type": "drupal-library",
+    "license": "GPL-2.0-or-later"
+}
